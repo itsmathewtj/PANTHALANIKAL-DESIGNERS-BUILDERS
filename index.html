@@ -12,6 +12,8 @@
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
@@ -29,175 +31,150 @@
 </head>
 
 <body>
-    <!-- Topbar Start -->
-    <!-- <div class="container-fluid bg-dark py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-white pr-3" href="">FAQs</a>
-                        <span class="text-white">|</span>
-                        <a class="text-white px-3" href="">Help</a>
-                        <span class="text-white">|</span>
-                        <a class="text-white pl-3" href="">Support</a>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center text-lg-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-white px-3" href="">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a class="text-white px-3" href="">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a class="text-white px-3" href="">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a class="text-white px-3" href="">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a class="text-white pl-3" href="">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Topbar End -->
+   
 
 
     <!-- Navbar Start -->
     <!-- ✅ Transparent Full-Width Navbar (No Black or White Top Area) -->
-<div class="container-fluid position-fixed p-0 w-100" style="z-index: 100;">
-    <nav
-      class="navbar navbar-expand-lg navbar-dark py-3 px-4"
-      style="background: transparent !important;"
-    >
-      <a href="#" class="navbar-brand">
-        <h1 class="m-0 display-5 text-white">
-          <span class="text-primary">i</span>DESIGN
-        </h1>
-      </a>
-  
-      <button
-        type="button"
-        class="navbar-toggler"
-        data-toggle="collapse"
-        data-target="#navbarCollapse"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-  
-      <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-        <div class="navbar-nav py-0">
-          <a href="index.html" class="nav-item nav-link active text-white">Home</a>
-          <a href="about.html" class="nav-item nav-link text-white">About</a>
-          <a href="service.html" class="nav-item nav-link text-white">Service</a>
-          <a href="project.html" class="nav-item nav-link text-white">Project</a>
-  
-          <div class="nav-item dropdown">
-            <a
-              href="#"
-              class="nav-link dropdown-toggle text-white"
-              data-toggle="dropdown"
-              >Pages</a
-            >
-            <div class="dropdown-menu rounded-0 m-0 bg-dark">
-              <a href="blog.html" class="dropdown-item text-white">Blog Grid</a>
-              <a href="single.html" class="dropdown-item text-white">Blog Detail</a>
+    <div class="container-fluid position-fixed p-0 w-100" style="z-index: 100;">
+        <nav
+          class="navbar navbar-expand-lg navbar-dark py-3 px-4"
+          style="background: transparent !important;"
+        >
+          <a href="#" class="navbar-brand">
+            <h1 class="m-0 display-5 text-white">
+              <span class="text-primary">i</span>DESIGN
+            </h1>
+          </a>
+      
+          <!-- ✅ Toggle button -->
+          <button
+            type="button"
+            class="navbar-toggler border-0"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+          <a href="contact.html" class="btn-quote">Get a Free Quote</a>
+
+<style>
+.btn-quote {
+  display: inline-block;
+  background: linear-gradient(45deg, #DFB163, #d4ae55);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.4);
+}
+
+.btn-quote:hover {
+  background: linear-gradient(45deg, #ffb400, #ff6b00);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 140, 0, 0.6);
+}
+</style>
+
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <!-- ✅ Collapsible menu -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            <div class="navbar-nav py-0 text-center">
+              <a href="index.html" class="nav-item nav-link active text-white">Home</a>
+              <a href="about.html" class="nav-item nav-link text-white">About</a>
+              <a href="service.html" class="nav-item nav-link text-white">Service</a>
+              <a href="project.html" class="nav-item nav-link text-white">Project</a>
+      
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle text-white"
+                  data-toggle="dropdown"
+                  >Pages</a
+                >
+                <div class="dropdown-menu rounded-0 m-0 bg-dark">
+                  <a href="blog.html" class="dropdown-item text-white">Blog Grid</a>
+                  <a href="single.html" class="dropdown-item text-white">Blog Detail</a>
+                </div>
+              </div>
+      
+              <a href="contact.html" class="nav-item nav-link text-white">Contact</a>
             </div>
           </div>
-  
-          <a href="contact.html" class="nav-item nav-link text-white">Contact</a>
-        </div>
+        </nav>
       </div>
-    </nav>
-  </div>
-  
-  <!-- ✅ CSS -->
-  <style>
-  .navbar {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: transparent !important;
-    transition: background 0.3s ease;
-    z-index: 100;
-  }
-  
-  /* Optional scroll effect */
-  .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.7) !important;
-    backdrop-filter: blur(6px);
-  }
-  
-  .navbar-nav .nav-link {
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #ffc107 !important; /* gold hover color */
-  }
-  </style>
-  
-  <!-- ✅ JS for scroll background change -->
-  <script>
-  window.addEventListener("scroll", function () {
-    const nav = document.querySelector(".navbar");
-    if (window.scrollY > 50) {
-      nav.classList.add("scrolled");
-    } else {
-      nav.classList.remove("scrolled");
-    }
-  });
-  </script>
-  
+      
+      <!-- ✅ CSS -->
+      <style>
+      .navbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: transparent !important;
+        transition: background 0.3s ease;
+        z-index: 100;
+      }
+      
+      /* Scroll blur + background */
+      .navbar.scrolled {
+        background: rgba(0, 0, 0, 0.7) !important;
+        backdrop-filter: blur(6px);
+      }
+      
+      /* Nav links */
+      .navbar-nav .nav-link {
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+      }
+      
+      .navbar-nav .nav-link:hover {
+        color: #ffc107 !important; /* gold hover */
+      }
+      
+      /* ✅ Collapsed menu gradient (mobile view) */
+      @media (max-width: 991px) {
+        .navbar-collapse {
+          background: linear-gradient(180deg, #000000, #222222);
+          border-radius: 0 0 12px 12px;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+          padding: 15px 0;
+        }
+      
+        .navbar-nav .nav-link {
+          color: #fff !important;
+          font-size: 1.1rem;
+          padding: 10px;
+        }
+      }
+      
+      /* Optional: smooth dropdown hover */
+      .dropdown-menu {
+        transition: all 0.3s ease;
+      }
+      </style>
+      
+      <!-- ✅ JS for scroll background change -->
+      <script>
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+      </script>  
     <!-- Navbar End -->
 
-
-    <!-- Under Nav Start -->
-    <!-- <div class="container-fluid bg-white py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 text-left mb-3 mb-lg-0">
-                    <div class="d-inline-flex text-left">
-                        <h1 class="flaticon-office font-weight-normal text-primary m-0 mr-3"></h1>
-                        <div class="d-flex flex-column">
-                            <h5>Our Office</h5>
-                            <p class="m-0">123 Street, New York, USA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-left text-lg-center mb-3 mb-lg-0">
-                    <div class="d-inline-flex text-left">
-                        <h1 class="flaticon-email font-weight-normal text-primary m-0 mr-3"></h1>
-                        <div class="d-flex flex-column">
-                            <h5>Email Us</h5>
-                            <p class="m-0">info@example.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-left text-lg-right mb-3 mb-lg-0">
-                    <div class="d-inline-flex text-left">
-                        <h1 class="flaticon-telephone font-weight-normal text-primary m-0 mr-3"></h1>
-                        <div class="d-flex flex-column">
-                            <h5>Call Us</h5>
-                            <p class="m-0">+012 345 6789</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- Under Nav End -->
-
-
-    <!-- Carousel Start -->
-    <!-- ✅ Add Animate.css inside <head> -->
 <link
 rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -323,13 +300,6 @@ top: 0;
     <div class="container-fluid bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-lg-5">
-                    <div class="d-flex flex-column align-items-center justify-content-center bg-primary h-100 py-5 px-3">
-                        <i class="flaticon-brickwall display-1 font-weight-normal text-secondary mb-3"></i>
-                        <h4 class="display-3 mb-3">25+</h4>
-                        <h1 class="m-0">Years Experience</h1>
-                    </div>
-                </div>
                 <div class="col-lg-7 m-0 my-lg-5 pt-5 pb-5 pb-lg-2 pl-lg-5">
                     <h6 class="text-primary font-weight-normal text-uppercase mb-3">Learn About Us</h6>
                     <h1 class="mb-4 section-title">We Are The Best Interior Designing Firm In Your City</h1>
@@ -361,6 +331,109 @@ top: 0;
                         </div>
                     </div>
                 </div>
+                <div class="col-lg-5 col-md-6 col-sm-12 mb-4">
+                    <div class="experience-box d-flex flex-column align-items-center justify-content-center bg-primary py-4 px-3 text-center">
+                      <div class="icon-wrapper mb-2">
+                        <i class="flaticon-brickwall display-4 font-weight-normal text-secondary"></i>
+                      </div>
+                      <h4 id="count-number" class="display-4 mb-2 text-white">0+</h4>
+                      <h1 class="m-0 text-white">Years Experience</h1>
+                    </div>
+                  </div>
+                  
+                  <!-- ✅ CSS -->
+                  <style>
+                  .experience-box {
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 20px;
+                    background: linear-gradient(145deg, #DFB163); /* same color tone */
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+                    transition: all 0.5s ease;
+                    height: 280px; /* 🔹 Reduced height */
+                  }
+                  
+                  .experience-box:hover {
+                    transform: translateY(-6px) scale(1.02);
+                    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+                  }
+                  
+                  .experience-box::before {
+                    content: "";
+                    position: absolute;
+                    top: -50%;
+                    left: -50%;
+                    width: 200%;
+                    height: 200%;
+                    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
+                    animation: rotateGlow 8s linear infinite;
+                  }
+                  
+                  @keyframes rotateGlow {
+                    from { transform: rotate(0deg); }
+                    to { transform: rotate(360deg); }
+                  }
+                  
+                  .icon-wrapper i {
+                    animation: bounceIcon 2.5s infinite ease-in-out;
+                    filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
+                  }
+                  
+                  @keyframes bounceIcon {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-8px); }
+                  }
+                  
+                  #count-number {
+                    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+                    animation: pulseNum 1.5s infinite alternate;
+                  }
+                  
+                  @keyframes pulseNum {
+                    from { transform: scale(1); opacity: 1; }
+                    to { transform: scale(1.08); opacity: 0.9; }
+                  }
+                  
+                  /* Responsive */
+                  @media (max-width: 992px) {
+                    .experience-box { height: 240px; }
+                    .icon-wrapper i { font-size: 50px !important; }
+                    #count-number { font-size: 40px !important; }
+                    .experience-box h1 { font-size: 22px !important; }
+                  }
+                  @media (max-width: 576px) {
+                    .experience-box { height: 200px; }
+                    .icon-wrapper i { font-size: 40px !important; }
+                    #count-number { font-size: 32px !important; }
+                    .experience-box h1 { font-size: 18px !important; }
+                  }
+                  </style>
+                  
+                  <!-- ✅ JS (Count Animation on Scroll) -->
+                  <script>
+                  function animateCount(target, start, end, duration) {
+                    let startTime = null;
+                    function updateCount(currentTime) {
+                      if (!startTime) startTime = currentTime;
+                      const progress = Math.min((currentTime - startTime) / duration, 1);
+                      const value = Math.floor(progress * (end - start) + start);
+                      target.textContent = value + "+";
+                      if (progress < 1) requestAnimationFrame(updateCount);
+                    }
+                    requestAnimationFrame(updateCount);
+                  }
+                  
+                  window.addEventListener("scroll", function () {
+                    const box = document.querySelector(".experience-box");
+                    const count = document.getElementById("count-number");
+                    const rect = box.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 100 && !count.started) {
+                      count.started = true;
+                      animateCount(count, 0, 25, 2000);
+                    }
+                  });
+                  </script>
+                  
             </div>
         </div>
     </div>
