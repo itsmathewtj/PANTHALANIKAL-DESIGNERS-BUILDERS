@@ -311,70 +311,35 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 }
 
 
-
-/* Transparent 3D Carousel (16 images) */
 .carousel-section {
-  background: transparent; /* no background */
-  padding: 100px 0;
+  width: 100%;
   overflow: hidden;
+  padding: 50px 0;
+  background: transparent;
 }
 
 .carousel-container {
-  perspective: 1200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .carousel3d {
-  position: relative;
-  width: 200px;
-  height: 280px;
-  transform-style: preserve-3d;
-  animation: rotate 25s infinite linear;
+  display: flex;
+  gap: 10px; /* small gap between images */
+  transition: transform 0.5s ease;
 }
 
-/* images */
 .carousel3d img {
-  position: absolute;
-  width: 170px; /* small gap between images */
-  height: 90px;
-  left: 5px;
-  top: 5px;
+  width: 200px;   /* adjust as needed */
+  height: 280px;  /* adjust as needed */
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-  transition: transform 0.5s, opacity 0.5s;
+  border-radius: 10px;
+  cursor: grab;
+  user-select: none;
 }
-
-/* Arrange 16 images evenly (22.5° apart) */
-.carousel3d img:nth-child(1)  { transform: rotateY(0deg) translateZ(450px); }
-.carousel3d img:nth-child(2)  { transform: rotateY(22.5deg) translateZ(450px); }
-.carousel3d img:nth-child(3)  { transform: rotateY(45deg) translateZ(450px); }
-.carousel3d img:nth-child(4)  { transform: rotateY(67.5deg) translateZ(450px); }
-.carousel3d img:nth-child(5)  { transform: rotateY(90deg) translateZ(450px); }
-.carousel3d img:nth-child(6)  { transform: rotateY(112.5deg) translateZ(450px); }
-.carousel3d img:nth-child(7)  { transform: rotateY(135deg) translateZ(450px); }
-.carousel3d img:nth-child(8)  { transform: rotateY(157.5deg) translateZ(450px); }
-.carousel3d img:nth-child(9)  { transform: rotateY(180deg) translateZ(450px); }
-.carousel3d img:nth-child(10) { transform: rotateY(202.5deg) translateZ(450px); }
-.carousel3d img:nth-child(11) { transform: rotateY(225deg) translateZ(450px); }
-.carousel3d img:nth-child(12) { transform: rotateY(247.5deg) translateZ(450px); }
-.carousel3d img:nth-child(13) { transform: rotateY(270deg) translateZ(450px); }
-.carousel3d img:nth-child(14) { transform: rotateY(292.5deg) translateZ(450px); }
-.carousel3d img:nth-child(15) { transform: rotateY(315deg) translateZ(450px); }
-.carousel3d img:nth-child(16) { transform: rotateY(337.5deg) translateZ(450px); }
-
-@keyframes rotate {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
-}
-
-/* Pause rotation when hovered */
-.carousel3d:hover {
-  animation-play-state: paused;
-}
-
 
 
 

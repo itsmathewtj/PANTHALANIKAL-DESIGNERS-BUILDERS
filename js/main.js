@@ -143,8 +143,48 @@ window.addEventListener("scroll", function () {
     animateIn: 'fadeIn',
   });
  
+  const carousel = document.querySelector('.carousel3d');
 
-const carousel = document.querySelector('.carousel3d');
-carousel.addEventListener('mouseenter', () => carousel.style.animationPlayState = 'paused');
-carousel.addEventListener('mouseleave', () => carousel.style.animationPlayState = 'running');
- 
+let isDragging = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+  carousel.style.cursor = 'grabbing';
+});
+
+carousel.addEventListener('mouseleave', () => {
+  isDragging = false;
+  carousel.style.cursor = 'grab';
+});
+
+carousel.addEventListener('mouseup', () => {
+  isDragging = false;
+  carousel.style.cursor = 'grab';
+});
+
+carousel.addEventListener('mousemove', (e) => {
+  if(!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 2; // scroll-fast
+  carousel.scrollLeft = scrollLeft - walk;
+});
+
+// Autoplay
+let autoScroll = 0;
+function slideCarousel() {
+  autoScroll += 1;
+  if(autoScroll > carousel.scrollWidth - carousel.clientWidth) {
+    autoScroll = 0;
+  }
+  carousel.scrollTo({
+    left: autoScroll,
+    behavior: 'smooth'
+  });
+}
+
+setInterval(slideCarousel, 50); // adjust speed (lower = faster)
