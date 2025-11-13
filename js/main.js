@@ -127,3 +127,19 @@ window.addEventListener("scroll", function () {
       nav.classList.remove("scrolled");
     }
   });
+
+
+
+   $('.service-carousel').owlCarousel({
+    autoplay: true,
+    autoplayTimeout: 2500,   // auto switch every 2.5 seconds
+    smartSpeed: 800,         // smooth slide speed
+    loop: true,
+    margin: 30,
+    dots: false,
+    nav: false,
+    items: 1,                // show one at a time (auto-switch)
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
+  });
+ 

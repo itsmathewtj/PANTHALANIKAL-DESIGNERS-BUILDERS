@@ -159,6 +159,157 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   top: 0;
   }
 
+  .service-carousel .service-item {
+    height: 400px; /* Increase height */
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-carousel .service-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-carousel .flaticon-bedroom,
+  .service-carousel .flaticon-kitchen,
+  .service-carousel .flaticon-bathroom {
+    animation: popUp 0.8s ease;
+  }
+  
+  @keyframes popUp {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+/* No space between items */
+.portfolio-container {
+  margin: 0;
+}
+
+.portfolio-item {
+  padding: 0;
+  margin: 0;
+}
+
+/* Wrapper */
+.portfolio-wrapper {
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Image */
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+  border-radius: 15px;
+}
+
+/* Hover zoom effect */
+.portfolio-wrapper:hover .portfolio-img img {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 15px;
+}
+
+/* Show overlay on hover */
+.portfolio-wrapper:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Plus button */
+.portfolio-overlay .btn {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-overlay .btn:hover {
+  transform: scale(1.1);
+}
+
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 10px; /* small vertical gap */
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+  border-radius: 15px;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.05);
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease;
+  border-radius: 15px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay a {
+  background: #fff;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+}
+
+.portfolio-overlay i {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+/* Remove horizontal gaps */
+.no-gutters {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
 
 
 body {
