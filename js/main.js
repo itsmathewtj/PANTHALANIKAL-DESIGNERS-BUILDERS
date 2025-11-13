@@ -143,3 +143,8 @@ window.addEventListener("scroll", function () {
     animateIn: 'fadeIn',
   });
  
+
+const carousel = document.querySelector('.carousel3d');
+carousel.addEventListener('mouseenter', () => carousel.style.animationPlayState = 'paused');
+carousel.addEventListener('mouseleave', () => carousel.style.animationPlayState = 'running');
+ 
