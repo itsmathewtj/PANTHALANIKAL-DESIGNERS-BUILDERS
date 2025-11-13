@@ -143,48 +143,18 @@ window.addEventListener("scroll", function () {
     animateIn: 'fadeIn',
   });
  
-  const carousel = document.querySelector('.carousel3d');
-
-let isDragging = false;
-let startX;
-let scrollLeft;
-
-carousel.addEventListener('mousedown', (e) => {
-  isDragging = true;
-  startX = e.pageX - carousel.offsetLeft;
-  scrollLeft = carousel.scrollLeft;
-  carousel.style.cursor = 'grabbing';
-});
-
-carousel.addEventListener('mouseleave', () => {
-  isDragging = false;
-  carousel.style.cursor = 'grab';
-});
-
-carousel.addEventListener('mouseup', () => {
-  isDragging = false;
-  carousel.style.cursor = 'grab';
-});
-
-carousel.addEventListener('mousemove', (e) => {
-  if(!isDragging) return;
-  e.preventDefault();
-  const x = e.pageX - carousel.offsetLeft;
-  const walk = (x - startX) * 2; // scroll-fast
-  carousel.scrollLeft = scrollLeft - walk;
-});
-
-// Autoplay
-let autoScroll = 0;
-function slideCarousel() {
-  autoScroll += 1;
-  if(autoScroll > carousel.scrollWidth - carousel.clientWidth) {
-    autoScroll = 0;
-  }
-  carousel.scrollTo({
-    left: autoScroll,
-    behavior: 'smooth'
+  const filterButtons = document.querySelectorAll('#portfolio-flters li');
+  const items = document.querySelectorAll('.portfolio-item');
+  
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      items.forEach(item => {
+        if(filter === 'all' || item.classList.contains(filter)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
   });
-}
-
-setInterval(slideCarousel, 50); // adjust speed (lower = faster)

@@ -310,36 +310,86 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   --bs-gutter-y: 0;
 }
 
-
-.carousel-section {
-  width: 100%;
-  overflow: hidden;
-  padding: 50px 0;
-  background: transparent;
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap; /* For desktop grid */
+  gap: 10px;
 }
 
-.carousel-container {
+/* Mobile horizontal scroll */
+@media (max-width: 768px) {
+  .portfolio-container {
+    flex-wrap: nowrap; /* horizontal scroll */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .portfolio-container .portfolio-item {
+    min-width: 80%; /* adjust width of each item on mobile */
+    flex: 0 0 auto;
+  }
+}
+
+/* Optional overlay effect */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.position-relative:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.portfolio-item {
+  flex: 1 1 calc(25% - 15px);
   position: relative;
 }
 
-.carousel3d {
-  display: flex;
-  gap: 10px; /* small gap between images */
-  transition: transform 0.5s ease;
+.portfolio-overlay {
+  position: absolute;
+  top:0; left:0; width:100%; height:100%;
+  display:flex; justify-content:center; align-items:center;
+  opacity:0; transition:opacity 0.3s;
+  background: rgba(255,255,255,0.3);
 }
 
-.carousel3d img {
-  width: 200px;   /* adjust as needed */
-  height: 280px;  /* adjust as needed */
-  object-fit: cover;
-  border-radius: 10px;
-  cursor: grab;
-  user-select: none;
+.position-relative:hover .portfolio-overlay { opacity:1; }
+
+/* Mobile Swipe */
+@media (max-width:768px){
+  .portfolio-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .portfolio-item {
+    flex: 0 0 90%;
+    min-width: 250px;
+    scroll-snap-align: center;
+  }
+  .portfolio-container::-webkit-scrollbar { display: none; }
 }
+
+
 
 
 
