@@ -352,36 +352,70 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 
 
-.portfolio-container {
-  gap: 15px;
-  flex-wrap: wrap; /* grid for desktop */
-}
 
-.portfolio-item {
-  flex: 1 1 calc(25% - 15px);
-  min-width: 200px;
+.service-item-only-img {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
   position: relative;
 }
 
-/* Mobile Swipe */
-@media (max-width: 768px) {
-  .portfolio-container {
-    flex-wrap: nowrap; /* horizontal scroll */
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-  }
+.owl-carousel .owl-item { padding: 0 6px; }
 
-  .portfolio-item {
-    flex: 0 0 90%; /* each image almost full width */
-    scroll-snap-align: center;
-  }
-
-  .portfolio-container::-webkit-scrollbar {
-    display: none; /* hide scrollbar */
-  }
+/* Center Plus Button */
+.plus-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  background: rgba(255,255,255,0.9);
 }
 
+/* Modal */
+.image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+}
+
+.modal-content-img {
+  max-width: 90%;
+  max-height: 80%;
+  opacity: 0;
+  transform: scale(0.7);
+  transition: 0.4s ease;
+}
+
+/* When visible */
+.image-modal.show {
+  display: flex;
+}
+
+.image-modal.show .modal-content-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
 
 
 

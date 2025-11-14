@@ -41,11 +41,11 @@
           class="navbar navbar-expand-lg navbar-dark py-3 px-4"
           style="background: transparent !important;"
         >
-          <a href="#" class="navbar-brand">
-            <h1 class="m-0 display-5 text-white">
-              <span class="text-primary">i</span>DESIGN
-            </h1>
-          </a>
+        <a href="#" class="navbar-brand">
+          <img src="img/This logo.png" 
+               alt="iDESIGN Logo" 
+               style="height: 70px; width: auto;">
+        </a>
       
           <!-- ✅ Toggle button -->
           <button
@@ -543,49 +543,27 @@ style="
     <!-- Projects End -->
 
 
-    <div class="container-fluid py-5 portfolio-section">
-      <div class="container py-5">
-        <!-- Section Header -->
-        <div class="row justify-content-center">
-          <div class="col-lg-6 col-md-8 text-center mb-4">
-            <h6 class="text-primary font-weight-normal text-uppercase mb-3">Our Projects</h6>
-            <h1 class="mb-4">Some Of Our Awesome Interior Designing Projects</h1>
-          </div>
-        </div>
-    
-        <!-- Portfolio Items -->
-        <div class="portfolio-container d-flex">
-          <div class="portfolio-item">
-            <div class="position-relative overflow-hidden">
-              <img class="img-fluid w-100" src="Architecture/37.jpg" alt="">
-            </div>
-          </div>
-    
-          <div class="portfolio-item">
-            <div class="position-relative overflow-hidden">
-              <img class="img-fluid w-100" src="Architecture/38.jpg" alt="">
-            </div>
-          </div>
-    
-          <div class="portfolio-item">
-            <div class="position-relative overflow-hidden">
-              <img class="img-fluid w-100" src="Interior/1.jpg" alt="">
-            </div>
-          </div>
-    
-          <div class="portfolio-item">
-            <div class="position-relative overflow-hidden">
-              <img class="img-fluid w-100" src="Realestate/1.jpg" alt="">
-            </div>
-          </div>
-        </div>
-    
-        <!-- View More Button -->
-        <div class="text-center mt-4">
-          <a href="project.html" class="btn btn-primary px-4 py-2 rounded-pill">View More Projects</a>
-        </div>
-      </div>
-    </div>
+    <!-- MODAL (must be outside the carousel) -->
+<div id="imageModal" class="image-modal">
+  <span class="close-modal">&times;</span>
+  <img id="modalImg" class="modal-content-img">
+</div>
+
+<div class="owl-carousel service-carousel">
+
+  <div class="service-item-only-img" style="background-image:url('Architecture/54.jpg');">
+  </div>
+
+  <div class="service-item-only-img" style="background-image:url('Architecture/46.jpg');">
+  </div>
+
+  <div class="service-item-only-img" style="background-image:url('Interior/41.jpg');">
+  </div>
+
+  <div class="service-item-only-img" style="background-image:url('Realestate/13.jpg');">
+  </div>
+
+</div>
 
 
 
@@ -778,14 +756,14 @@ style="
         <div class="row pt-5">
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-primary mb-4">Get In Touch</h4>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>GRGH+437, P.o, Kanjirapally - Erumely Rd, Koovappally, Kerala 686518</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>+91 9496263642</p>
+                <p><i class="fa fa-envelope mr-2"></i>nestpdb2018@gmail.com</p>
                 <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
+                  <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="tel:+91 9496263642"><i class="fa fa-phone"></i></a>
+                  <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="mailto:nestpdb2018@gmail.com"><i class="fa fa-envelope"></i></a>
+                  <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="https://www.facebook.com/share/1HDE1R6Vpp/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                  <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="https://www.instagram.com/_panthalanikal_group_?igsh=MThmMGhibDB4ZXVyeg=="><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
@@ -801,35 +779,25 @@ style="
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-primary mb-4">Popular Links</h4>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Projects</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Architecture</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Construction</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Interior Designing</a>
+                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Road Works</a>
+                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Real Estate</a>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-primary mb-4">Newsletter</h4>
                 <form action="">
-                    <div class="form-group">
-                        <input type="text" class="form-control border-0" placeholder="Your Name" required="required" />
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control border-0" placeholder="Your Email" required="required" />
-                    </div>
-                    <div>
-                        <button class="btn btn-lg btn-primary btn-block border-0" type="submit">Submit Now</button>
-                    </div>
-                </form>
+                    <p>Panthalanikal Designers & Builders brings over 30 years of trusted excellence in architecture, construction, and interior design. With decades of experience, we deliver innovative designs, quality workmanship, and durable structures that stand the test of time.</p>
             </div>
         </div>
         <div class="container border-top border-secondary pt-5">
-            <p class="m-0 text-center text-white">
-                &copy; <a class="text-white font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved. 
-				
-				<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-				Designed by <a class="text-white font-weight-bold" href="">itsmathewtj</a>
-            </p>
+          <p class="m-0 text-center text-white">
+            &copy; <a class="text-white font-weight-bold" href="#">Panthalanikal Designers & Builders.</a>All Rights Reserved. 
+    <br>
+    Designed by <a class="text-white font-weight-bold" href="">itsmathewtj</a>
+        </p>
         </div>
     </div>
     <!-- Footer End -->

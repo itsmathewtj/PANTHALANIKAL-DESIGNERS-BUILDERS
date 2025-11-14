@@ -143,18 +143,48 @@ window.addEventListener("scroll", function () {
     animateIn: 'fadeIn',
   });
  
-  const filterButtons = document.querySelectorAll('#portfolio-flters li');
-  const items = document.querySelectorAll('.portfolio-item');
+ 
   
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
-      items.forEach(item => {
-        if(filter === 'all' || item.classList.contains(filter)) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
+
+  $(document).ready(function () {
+
+    // Owl Carousel
+    $('.service-carousel').owlCarousel({
+      autoplay: true,
+      loop: true,
+      margin: 10,
+      dots: false,
+      nav: false,
+      responsive: {
+        0: { items: 1.2 },
+        600: { items: 2 },
+        1000: { items: 3 }
+      }
     });
+  
+    // Modal elements
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+  
+    // Open modal on button click
+    $(document).on("click", ".plus-btn", function () {
+      const imgSrc = $(this).data("img");
+  
+      modalImg.src = imgSrc;
+      modal.classList.add("show");
+    });
+  
+    // Close modal
+    $(".close-modal").click(function () {
+      modal.classList.remove("show");
+    });
+  
+    // Close on clicking background
+    $("#imageModal").click(function (e) {
+      if (e.target === this) {
+        modal.classList.remove("show");
+      }
+    });
+  
   });
+  
