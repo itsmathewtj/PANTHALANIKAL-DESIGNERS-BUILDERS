@@ -417,6 +417,25 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   cursor: pointer;
 }
 
+/* Make each image card */
+.service-item-only-img {
+  height: 280px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* Remove extra container restrictions */
+.container-fluid.p-0 {
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Small side spacing between items */
+.owl-carousel .owl-item {
+  padding: 0 6px;
+}
 
 
 

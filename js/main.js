@@ -188,3 +188,18 @@ window.addEventListener("scroll", function () {
   
   });
   
+
+  $('.service-carousel').owlCarousel({
+    loop: true,
+    margin: 10,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    smartSpeed: 800,
+    dots: false,
+    nav: false,
+    responsive: {
+        0: { items: 1.2 },
+        600: { items: 2.2 },
+        1000: { items: 4 }
+    }
+});
