@@ -54,6 +54,74 @@
         </a>
         
       
+
+        <!-- FIXED ICONS -->
+<div class="fixed-social-icons">
+  <a href="tel:+91XXXXXXXXXX" class="icon call"><i class="fas fa-phone"></i></a>
+  <a href="https://wa.me/91XXXXXXXXXX" class="icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://instagram.com/yourprofile" class="icon instagram"><i class="fab fa-instagram"></i></a>
+  <a href="mailto:yourmail@gmail.com" class="icon mail"><i class="fas fa-envelope"></i></a>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* THIS FIXES EVERYTHING */
+body, html {
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* 100% ANTI-MOVE FIX */
+.fixed-social-icons {
+  position: fixed !important;
+  top: 40% !important;
+  right: 15px !important;
+  transform: translateY(-50%);
+  z-index: 999999999 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  pointer-events: auto;
+}
+
+/* ICON STYLE */
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s;
+  animation: pulse 2.2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.icon:hover {
+  transform: scale(1.25);
+}
+
+/* Colors */
+.call { background: #25D366; }
+.whatsapp { background: #128C7E; }
+.instagram { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+.mail { background: #EA4335; }
+</style>
+
+
+
+
+
           <!-- ✅ Toggle button -->
           <button
             type="button"
