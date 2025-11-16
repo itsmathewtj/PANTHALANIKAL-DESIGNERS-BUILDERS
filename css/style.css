@@ -439,6 +439,18 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 
 
+.portfolio-item {
+  transition: 0.4s;
+}
+
+.portfolio-item.hide {
+  display: none !important;
+}
+
+#portfolio-flters li.active {
+  background: #a36323;
+  color: #fff !important;
+}
 
 
 

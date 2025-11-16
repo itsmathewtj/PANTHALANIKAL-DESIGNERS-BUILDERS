@@ -205,3 +205,19 @@ window.addEventListener("scroll", function () {
 });
 
 
+  $(document).ready(function () {
+    $("#portfolio-flters li").click(function () {
+
+      $("#portfolio-flters li").removeClass("active");
+      $(this).addClass("active");
+
+      let filterValue = $(this).attr("data-filter");
+
+      if (filterValue === "*") {
+        $(".portfolio-item").show(300);
+      } else {
+        $(".portfolio-item").hide(300);
+        $(filterValue).show(300);
+      }
+    });
+  });
