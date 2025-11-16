@@ -146,20 +146,7 @@ body, html {
               <a href="about.html" class="nav-item nav-link text-white">About</a>
               <a href="service.html" class="nav-item nav-link text-white">Service</a>
               <a href="project.html" class="nav-item nav-link text-white">Project</a>
-      
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle text-white"
-                  data-toggle="dropdown"
-                  >Pages</a
-                >
-                <div class="dropdown-menu rounded-0 m-0 bg-dark">
-                  <a href="blog.html" class="dropdown-item text-white">Blog Grid</a>
-                  <a href="single.html" class="dropdown-item text-white">Blog Detail</a>
-                </div>
-              </div>
-      
+              <a href="blog.html" class="nav-item nav-link text-white">Blog</a>      
               <a href="contact.html" class="nav-item nav-link text-white">Contact</a>
             </div>
           </div>
@@ -196,19 +183,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           <h4
             class="text-primary text-uppercase font-weight-normal mb-md-3 animate__animated animate__fadeInDown animate__delay-0_5s"
           >
-            Creative Interior Design
+            Creative Design
           </h4>
           <h3
             class="display-3 text-white mb-md-4 animate__animated animate__fadeInUp animate__delay-1s"
           >
             Make Your Home Better
           </h3>
-          <a
-            href="#"
-            class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4 animate__animated animate__fadeInUp animate__delay-1_5s"
-          >
-            Learn More
-          </a>
+         
         </div>
       </div>
     </div>
@@ -227,19 +209,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           <h4
             class="text-primary text-uppercase font-weight-normal mb-md-3 animate__animated animate__fadeInDown animate__delay-0_5s"
           >
-            Creative Interior Design
+            Creative Design
           </h4>
           <h3
             class="display-3 text-white mb-md-4 animate__animated animate__fadeInUp animate__delay-1s"
           >
             Stay At Home In Peace
           </h3>
-          <a
-            href="#"
-            class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4 animate__animated animate__fadeInUp animate__delay-1_5s"
-          >
-            Learn More
-          </a>
+         
         </div>
       </div>
     </div>
@@ -297,107 +274,75 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12 mb-4">
-                    <div class="experience-box d-flex flex-column align-items-center justify-content-center bg-primary py-4 px-3 text-center">
-                      <div class="icon-wrapper mb-2">
-                        <i class="flaticon-brickwall display-4 font-weight-normal text-secondary"></i>
-                      </div>
-                      <h4 id="count-number" class="display-4 mb-2 text-white">0+</h4>
-                      <h1 class="m-0 text-white">Years Experience</h1>
+                  <div class="experience-box d-flex flex-column align-items-center justify-content-center bg-primary py-4 px-3 text-center rounded-box">
+                    <div class="icon-wrapper mb-2">
+                      <i class="flaticon-brickwall display-4 font-weight-normal text-secondary"></i>
                     </div>
+                
+                    <!-- Counter -->
+                    <h4 id="count-number" class="display-4 mb-2 text-white">0</h4>
+                
+                    <h1 class="m-0 text-white">Years Experience</h1>
                   </div>
-                  
-                  <!-- ✅ CSS -->
-                  <style>
-                  .experience-box {
-                    position: relative;
-                    overflow: hidden;
+                </div>
+                
+                <style>
+                  /* Rounded box */
+                  .rounded-box {
                     border-radius: 20px;
-                    background: linear-gradient(145deg, #DFB163); /* same color tone */
-                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-                    transition: all 0.5s ease;
-                    height: 280px; /* 🔹 Reduced height */
                   }
-                  
-                  .experience-box:hover {
-                    transform: translateY(-6px) scale(1.02);
-                    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-                  }
-                  
-                  .experience-box::before {
-                    content: "";
-                    position: absolute;
-                    top: -50%;
-                    left: -50%;
-                    width: 200%;
-                    height: 200%;
-                    background: radial-gradient(circle, rgba(255,255,255,0.15), transparent 70%);
-                    animation: rotateGlow 8s linear infinite;
-                  }
-                  
-                  @keyframes rotateGlow {
-                    from { transform: rotate(0deg); }
-                    to { transform: rotate(360deg); }
-                  }
-                  
-                  .icon-wrapper i {
-                    animation: bounceIcon 2.5s infinite ease-in-out;
-                    filter: drop-shadow(0 0 6px rgba(255,255,255,0.4));
-                  }
-                  
-                  @keyframes bounceIcon {
-                    0%, 100% { transform: translateY(0); }
-                    50% { transform: translateY(-8px); }
-                  }
-                  
-                  #count-number {
-                    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
-                    animation: pulseNum 1.5s infinite alternate;
-                  }
-                  
-                  @keyframes pulseNum {
-                    from { transform: scale(1); opacity: 1; }
-                    to { transform: scale(1.08); opacity: 0.9; }
-                  }
-                  
-                  /* Responsive */
-                  @media (max-width: 992px) {
-                    .experience-box { height: 240px; }
-                    .icon-wrapper i { font-size: 50px !important; }
-                    #count-number { font-size: 40px !important; }
-                    .experience-box h1 { font-size: 22px !important; }
-                  }
-                  @media (max-width: 576px) {
-                    .experience-box { height: 200px; }
-                    .icon-wrapper i { font-size: 40px !important; }
-                    #count-number { font-size: 32px !important; }
-                    .experience-box h1 { font-size: 18px !important; }
-                  }
-                  </style>
-                  
-                  <!-- ✅ JS (Count Animation on Scroll) -->
-                  <script>
-                  function animateCount(target, start, end, duration) {
-                    let startTime = null;
-                    function updateCount(currentTime) {
-                      if (!startTime) startTime = currentTime;
-                      const progress = Math.min((currentTime - startTime) / duration, 1);
-                      const value = Math.floor(progress * (end - start) + start);
-                      target.textContent = value + "+";
-                      if (progress < 1) requestAnimationFrame(updateCount);
+                
+                  /* ensure text is pure white */
+                  #count-number, .rounded-box h1 { color: #ffffff !important; }
+                </style>
+                
+                <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const counterEl = document.getElementById("count-number");
+                    const target = document.querySelector(".experience-box");
+                    if (!counterEl || !target) return;
+                
+                    const finalCount = 30;
+                    let started = false;
+                
+                    function runCounter() {
+                      if (started) return;
+                      started = true;
+                
+                      let count = 0;
+                      // show initial 0
+                      counterEl.innerText = "0";
+                
+                      const speed = 60; // ms per increment (lower = faster)
+                      const interval = setInterval(() => {
+                        count++;
+                        if (count <= finalCount) {
+                          // show plus sign only when reached final value
+                          counterEl.innerText = count + (count === finalCount ? "+" : "");
+                        }
+                
+                        if (count >= finalCount) {
+                          clearInterval(interval);
+                        }
+                      }, speed);
                     }
-                    requestAnimationFrame(updateCount);
-                  }
-                  
-                  window.addEventListener("scroll", function () {
-                    const box = document.querySelector(".experience-box");
-                    const count = document.getElementById("count-number");
-                    const rect = box.getBoundingClientRect();
-                    if (rect.top < window.innerHeight - 100 && !count.started) {
-                      count.started = true;
-                      animateCount(count, 0, 30, 2000);
-                    }
+                
+                    // Use IntersectionObserver to trigger once when the element becomes visible
+                    const io = new IntersectionObserver((entries, observer) => {
+                      entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                          runCounter();
+                          observer.disconnect(); // stop observing
+                        }
+                      });
+                    }, { threshold: 0.5 }); // 50% visible to start
+                
+                    io.observe(target);
                   });
-                  </script>
+                </script>
+                
+                  
+                  
                   
             </div>
         </div>
@@ -624,7 +569,7 @@ style="
         <div class="row justify-content-center">
           <div class="col-lg-6 col-md-8 text-center mb-4">
             <h6 class="text-primary font-weight-normal text-uppercase mb-3">Our Projects</h6>
-            <h1 class="mb-4">Some Of Our Awesome Interior Designing Projects</h1>
+            <h1 class="mb-4">Some Of Our Awesome Designing Projects</h1>
           </div>
         </div>
 <div id="imageModal" class="image-modal">
@@ -671,77 +616,106 @@ style="
 
     <!-- Team Start -->
     <div class="container-fluid bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="py-5 px-4 h-100 bg-primary d-flex flex-column align-items-center justify-content-center">
-                        <h6 class="text-white font-weight-normal text-uppercase mb-3">Our Team</h6>
-                        <h1 class="mb-0 text-center">Meet Our Team Members</h1>
-                    </div>
-                </div>
-                <div class="col-md-8 col-sm-6 p-0 py-sm-5">
-                    <div class="owl-carousel team-carousel position-relative p-0 py-sm-5">
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
-                                <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">Name Goes Here</h5>
-                                <p class="m-0">Designation</p>
-                            </div>
-                        </div>
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
-                                <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">Name Goes Here</h5>
-                                <p class="m-0">Designation</p>
-                            </div>
-                        </div>
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
-                                <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">Name Goes Here</h5>
-                                <p class="m-0">Designation</p>
-                            </div>
-                        </div>
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
-                                <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">Name Goes Here</h5>
-                                <p class="m-0">Designation</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      <div class="container">
+          <div class="row">
+  
+              <!-- Left Title Box -->
+              <div class="col-md-4 col-sm-6">
+                  <div class="py-5 px-4 h-100 bg-primary d-flex flex-column align-items-center justify-content-center">
+                      <h6 class="text-white font-weight-normal text-uppercase mb-3">Our Team</h6>
+                      <h1 class="mb-0 text-center text-white">Meet Our Team Members</h1>
+                  </div>
+              </div>
+  
+              <!-- Team Carousel -->
+              <div class="col-md-8 col-sm-6 p-0 py-sm-5">
+                  <div class="owl-carousel team-carousel position-relative p-0 py-sm-5">
+  
+                      <!-- TEAM MEMBER -->
+                      <div class="team d-flex flex-column text-center mx-3">
+                          <div class="team-img-box position-relative">
+                              <img class="team-img" src="img/Founder.jpg" alt="">
+                          </div>
+                          <div class="team-text bg-secondary">
+                              <h5>Tomy Joseph</h5>
+                              <p>Founder</p>
+                          </div>
+                      </div>
+  
+                      <div class="team d-flex flex-column text-center mx-3">
+                          <div class="team-img-box position-relative">
+                              <img class="team-img" src="img/Managing Director.JPG" alt="">
+                          </div>
+                          <div class="team-text bg-secondary">
+                              <h5>Anju Treasa Thomas</h5>
+                              <p>Managing Director</p>
+                          </div>
+                      </div>
+  
+                      <div class="team d-flex flex-column text-center mx-3">
+                          <div class="team-img-box position-relative">
+                              <img class="team-img" src="img/Business development managers.jpg" alt="">
+                          </div>
+                          <div class="team-text bg-secondary">
+                              <h5>Jinu K Benny</h5>
+                              <p>Business Development Manager</p>
+                          </div>
+                      </div>
+  
+                      <div class="team d-flex flex-column text-center mx-3">
+                          <div class="team-img-box position-relative">
+                              <img class="team-img" src="img/Scial Media.jpg" alt="">
+                          </div>
+                          <div class="team-text bg-secondary">
+                              <h5>Anu Mary Thomas</h5>
+                              <p>Social Media & Marketing Manager</p>
+                          </div>
+                      </div>
+  
+                  </div>
+              </div>
+  
+          </div>
+      </div>
+  </div>
+  
+  <style>
+      /* Image Frame */
+      .team-img-box {
+          overflow: hidden;
+          border-radius: 10px;
+          border: 3px solid #ffffff;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      }
+  
+      /* Image Styling (same height, zoom effect) */
+      .team-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.4s ease;
+      }
+  
+      .team-img-box:hover .team-img {
+          transform: scale(1.07);  /* Small Zoom Effect */
+      }
+  
+      /* Text Box Styling */
+      .team-text {
+          padding: 20px 10px;
+          min-height: 120px;   /* Same height always */
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          color: #ffffff !important;  /* Pure White Text */
+      }
+      .team-text h5,
+      .team-text p {
+          color: #ffffff !important;
+          margin: 0;
+      }
+  </style>
+  
     <!-- Team End -->
 
 
@@ -755,24 +729,58 @@ style="
                     <div class="owl-carousel testimonial-carousel position-relative pb-5 mb-md-5">
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" alt="">
+                                <!-- <img class="img-fluid rounded-circle" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" alt=""> -->
                                 <div class="ml-3">
-                                    <h5>Client Name</h5>
-                                    <i>Profession</i>
-                                </div>
+                                    <h5>Mathews</h5>
+                                 </div>
                             </div>
-                            <p>Tempor at diam tempor sed. Sanctus dolor ipsum ut nonumy amet clita sea. Sed eos sed dolores vero no. Ipsum elitr elitr stet dolor  lorem erat. Diam no amet sea justo vero ut. Dolor ipsum kasd ipsum dolore.</p>
+                            <p>Their architecture team created a beautiful and functional house design. Every detail was planned perfectly, and the final result exceeded all my expectations.</p>
                         </div>
                         <div class="d-flex flex-column">
                             <div class="d-flex align-items-center mb-3">
-                                <img class="img-fluid rounded-circle" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" alt="">
+                                <!-- <img class="img-fluid rounded-circle" src="" style="width: 60px; height: 60px;" alt=""> -->
                                 <div class="ml-3">
-                                    <h5>Client Name</h5>
-                                    <i>Profession</i>
-                                </div>
+                                    <h5>Martin</h5>
+                                 </div>
                             </div>
-                            <p class="m-0">Tempor at diam tempor sed. Sanctus dolor ipsum ut nonumy amet clita sea. Sed eos sed dolores vero no. Ipsum elitr elitr stet dolor  lorem erat. Diam no amet sea justo vero ut. Dolor ipsum kasd ipsum dolore.</p>
+                            <p class="m-0">The construction quality was outstanding. They used strong materials, followed a clear timeline, and delivered my project with excellent finishing and great professionalism.</p>
                         </div>
+                        <div class="d-flex flex-column">
+                          <div class="d-flex align-items-center mb-3">
+                              <!-- <img class="img-fluid rounded-circle" src="" style="width: 60px; height: 60px;" alt=""> -->
+                              <div class="ml-3">
+                                  <h5>Joseph</h5>
+                               </div>
+                          </div>
+                          <p class="m-0">Interior design services were amazing. They understood my style, selected elegant materials, and transformed every room into a modern, comfortable living space.</p>
+                      </div>
+                      <div class="d-flex flex-column">
+                        <div class="d-flex align-items-center mb-3">
+                            <!-- <img class="img-fluid rounded-circle" src="" style="width: 60px; height: 60px;" alt=""> -->
+                            <div class="ml-3">
+                                <h5>Tony</h5>
+                             </div>
+                        </div>
+                        <p class="m-0">Their road work team completed our pathway project quickly and efficiently. Strong foundation, smooth finish, and long-lasting quality made us very satisfied.</p>
+                    </div>
+                    <div class="d-flex flex-column">
+                      <div class="d-flex align-items-center mb-3">
+                          <!-- <img class="img-fluid rounded-circle" src="" style="width: 60px; height: 60px;" alt=""> -->
+                          <div class="ml-3">
+                              <h5>Ajo</h5>
+                           </div>
+                      </div>
+                      <p class="m-0">The real estate service was very helpful. They guided me throughout the process, provided transparent information, and helped me choose the perfect property.</p>
+                  </div>
+                  <div class="d-flex flex-column">
+                    <div class="d-flex align-items-center mb-3">
+                        <!-- <img class="img-fluid rounded-circle" src="" style="width: 60px; height: 60px;" alt=""> -->
+                        <div class="ml-3">
+                            <h5>Amal</h5>
+                         </div>
+                    </div>
+                    <p class="m-0">Panthalanikal handled everything professionally—architecture, construction, interior design, road works, and real estate. Their experience and dedication truly make them a reliable company.</p>
+                </div>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -798,51 +806,51 @@ style="
             <div class="row pb-3">
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 mb-2">
-                        <img class="card-img-top" src="img/blog-1.jpg" alt="">
+                        <img class="card-img-top" src="img/Budjet Homes.jpg" alt="">
                         <div class="card-body bg-white p-4">
                             <div class="d-flex align-items-center mb-3">
-                                <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
-                                <h5 class="m-0 ml-3 text-truncate">Diam amet eos at no eos</h5>
+                                <a class="btn btn-primary" href=""><i class="fa fa-home"></i></a>
+                                <h5 class="m-0 ml-3 text-truncate">Budget Homes</h5>
                             </div>
-                            <p>Diam amet eos at no eos sit, amet rebum ipsum clita stet, diam sea est diam eos, sit vero stet justo</p>
+                            <p>Budget homes provide smart layouts, durable materials, and affordable comfort for families seeking practical, modern living spaces.</p>
                             <div class="d-flex">
-                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
-                                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
-                                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Mrs.Magi</small>
+                                <small class="mr-3"><i class="fa fa-map-marker-alt text-primary"></i> Kanjirappally</small>
+                                <small class="mr-3"><i class="fa fa-ruler-combined text-primary"></i> 652 sqft</small>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 mb-2">
-                        <img class="card-img-top" src="img/blog-2.jpg" alt="">
+                        <img class="card-img-top" src="img/Restaurant.jpg" alt="">
                         <div class="card-body bg-white p-4">
                             <div class="d-flex align-items-center mb-3">
-                                <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
-                                <h5 class="m-0 ml-3 text-truncate">Diam amet eos at no eos</h5>
+                                <a class="btn btn-primary" href=""><i class="fa fa-home"></i></a>
+                                <h5 class="m-0 ml-3 text-truncate">Restaurant</h5>
                             </div>
-                            <p>Diam amet eos at no eos sit, amet rebum ipsum clita stet, diam sea est diam eos, sit vero stet justo</p>
+                            <p>Restaurant design focuses on ambiance, lighting, layout, and comfort to create enjoyable dining experiences for customers.</p>
                             <div class="d-flex">
-                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
-                                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
-                                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Mrs.Safna</small>
+                                <small class="mr-3"><i class="fa fa-map-marker-alt text-primary"></i> Kanjirappally</small>
+                                <small class="mr-3"><i class="fa fa-ruler-combined text-primary"></i> 15</small>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card border-0 mb-2">
-                        <img class="card-img-top" src="img/blog-3.jpg" alt="">
+                        <img class="card-img-top" src="img/Interior.jpg" alt="">
                         <div class="card-body bg-white p-4">
                             <div class="d-flex align-items-center mb-3">
-                                <a class="btn btn-primary" href=""><i class="fa fa-link"></i></a>
-                                <h5 class="m-0 ml-3 text-truncate">Diam amet eos at no eos</h5>
+                                <a class="btn btn-primary" href=""><i class="fa fa-home"></i></a>
+                                <h5 class="m-0 ml-3 text-truncate">Interior Design</h5>
                             </div>
-                            <p>Diam amet eos at no eos sit, amet rebum ipsum clita stet, diam sea est diam eos, sit vero stet justo</p>
+                            <p>Interior designing combines creativity, function, and style to transform spaces into beautiful, comfortable, personalized environments.</p>
                             <div class="d-flex">
-                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Admin</small>
-                                <small class="mr-3"><i class="fa fa-folder text-primary"></i> Web Design</small>
-                                <small class="mr-3"><i class="fa fa-comments text-primary"></i> 15</small>
+                                <small class="mr-3"><i class="fa fa-user text-primary"></i> Mr.Praveen & Jerin</small>
+                                <small class="mr-3"><i class="fa fa-map-marker-alt text-primary"></i> Ponkunnam</small>
+                                <small class="mr-3"><i class="fa fa-ruler-combined text-primary"></i> 2000 sqft</small>
                             </div>
                         </div>
                     </div>

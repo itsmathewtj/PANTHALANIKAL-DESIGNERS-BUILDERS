@@ -123,7 +123,6 @@ body, html {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-          <a href="contact.html" class="btn-glass">Get a Free Quote</a>
 
 
 
@@ -137,20 +136,7 @@ body, html {
               <a href="about.html" class="nav-item nav-link active text-white">About</a>
               <a href="service.html" class="nav-item nav-link text-white">Service</a>
               <a href="project.html" class="nav-item nav-link text-white">Project</a>
-      
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle text-white"
-                  data-toggle="dropdown"
-                  >Pages</a
-                >
-                <div class="dropdown-menu rounded-0 m-0 bg-dark">
-                  <a href="blog.html" class="dropdown-item text-white">Blog Grid</a>
-                  <a href="single.html" class="dropdown-item text-white">Blog Detail</a>
-                </div>
-              </div>
-      
+              <a href="blog.html" class="nav-item nav-link text-white">Blog</a>      
               <a href="contact.html" class="nav-item nav-link text-white">Contact</a>
             </div>
           </div>
@@ -187,19 +173,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           <h4
             class="text-primary text-uppercase font-weight-normal mb-md-3 animate__animated animate__fadeInDown animate__delay-0_5s"
           >
-            Creative Interior Design
+            Creative Design
           </h4>
           <h3
             class="display-3 text-white mb-md-4 animate__animated animate__fadeInUp animate__delay-1s"
           >
             Make Your Home Better
           </h3>
-          <a
-            href="#"
-            class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4 animate__animated animate__fadeInUp animate__delay-1_5s"
-          >
-            Learn More
-          </a>
+          
         </div>
       </div>
     </div>
@@ -218,19 +199,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
           <h4
             class="text-primary text-uppercase font-weight-normal mb-md-3 animate__animated animate__fadeInDown animate__delay-0_5s"
           >
-            Creative Interior Design
+            Creative Design
           </h4>
           <h3
             class="display-3 text-white mb-md-4 animate__animated animate__fadeInUp animate__delay-1s"
           >
             Stay At Home In Peace
           </h3>
-          <a
-            href="#"
-            class="btn btn-primary py-md-3 px-md-5 mt-2 mt-md-4 animate__animated animate__fadeInUp animate__delay-1_5s"
-          >
-            Learn More
-          </a>
+          
+          
         </div>
       </div>
     </div>
@@ -288,14 +265,73 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                     </div>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12 mb-4">
-                    <div class="experience-box d-flex flex-column align-items-center justify-content-center bg-primary py-4 px-3 text-center">
-                      <div class="icon-wrapper mb-2">
-                        <i class="flaticon-brickwall display-4 font-weight-normal text-secondary"></i>
-                      </div>
-                      <h4 id="count-number" class="display-4 mb-2 text-white">0+</h4>
-                      <h1 class="m-0 text-white">Years Experience</h1>
+                  <div class="experience-box d-flex flex-column align-items-center justify-content-center bg-primary py-4 px-3 text-center rounded-box">
+                    <div class="icon-wrapper mb-2">
+                      <i class="flaticon-brickwall display-4 font-weight-normal text-secondary"></i>
                     </div>
+                
+                    <!-- Counter -->
+                    <h4 id="count-number" class="display-4 mb-2 text-white">0</h4>
+                
+                    <h1 class="m-0 text-white">Years Experience</h1>
                   </div>
+                </div>
+                
+                <style>
+                  /* Rounded box */
+                  .rounded-box {
+                    border-radius: 20px;
+                  }
+                
+                  /* ensure text is pure white */
+                  #count-number, .rounded-box h1 { color: #ffffff !important; }
+                </style>
+                
+                <script>
+                  document.addEventListener("DOMContentLoaded", function() {
+                    const counterEl = document.getElementById("count-number");
+                    const target = document.querySelector(".experience-box");
+                    if (!counterEl || !target) return;
+                
+                    const finalCount = 30;
+                    let started = false;
+                
+                    function runCounter() {
+                      if (started) return;
+                      started = true;
+                
+                      let count = 0;
+                      // show initial 0
+                      counterEl.innerText = "0";
+                
+                      const speed = 60; // ms per increment (lower = faster)
+                      const interval = setInterval(() => {
+                        count++;
+                        if (count <= finalCount) {
+                          // show plus sign only when reached final value
+                          counterEl.innerText = count + (count === finalCount ? "+" : "");
+                        }
+                
+                        if (count >= finalCount) {
+                          clearInterval(interval);
+                        }
+                      }, speed);
+                    }
+                
+                    // Use IntersectionObserver to trigger once when the element becomes visible
+                    const io = new IntersectionObserver((entries, observer) => {
+                      entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                          runCounter();
+                          observer.disconnect(); // stop observing
+                        }
+                      });
+                    }, { threshold: 0.5 }); // 50% visible to start
+                
+                    io.observe(target);
+                  });
+                </script>
+                
                   
                   <!-- ✅ CSS -->
                   <style>
