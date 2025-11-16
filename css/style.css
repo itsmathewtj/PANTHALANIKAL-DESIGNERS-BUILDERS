@@ -455,6 +455,63 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 
 
+.feature-boxes {
+    margin-top: 20px;
+}
+
+.feature-item {
+    background: #ffffff;
+    padding: 25px 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: 0.35s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.feature-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+    border-color: #020910;
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 14px;
+    background: #e8f1ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-size: 32px;
+    color: #ca6d1b;
+    transition: 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+    background: #c59258;
+    color: #ffffff;
+}
+
+.feature-item h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+
+
+
+
+
+
 body {
   margin: 0;
   font-family: "Playfair Display", serif;
