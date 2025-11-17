@@ -230,6 +230,133 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
 
 <!-- Portfolio Section Start -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portfolio — Stable Plus-Icon Popup</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  /* Keep your page styles — modal-specific styles below */
+  .container-fluid { padding: 30px; font-family: system-ui, Arial, sans-serif; }
+
+  /* Modal */
+  .image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;                    /* top:0; right:0; bottom:0; left:0 */
+    z-index: 2147483646;         /* extremely high to avoid interference */
+    background: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    -webkit-overflow-scrolling: touch;
+  }
+  .image-modal.show { display:flex; }
+
+  .modal-inner {
+    max-width: 94%;
+    max-height: 88vh;
+    padding: 12px;
+    box-sizing: border-box;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .modal-content-img {
+    max-width:100%;
+    max-height:100%;
+    border-radius: 10px;
+    box-shadow: 0 18px 60px rgba(0,0,0,0.7);
+    -webkit-user-drag: none;
+    user-select: none;
+    touch-action: none;
+  }
+
+  .close-modal {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    z-index: 2147483647;
+    background: rgba(0,0,0,0.35);
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /* Portfolio overlay / plus icon area */
+  .position-relative { position: relative; overflow: hidden; }
+  .portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity: 0;
+    transition: opacity .18s ease;
+    pointer-events: none; /* overlay itself doesn't capture clicks */
+  }
+  .position-relative:hover .portfolio-overlay,
+  .position-relative:focus-within .portfolio-overlay { opacity:1; pointer-events:auto; }
+
+  a.open-popup, button.open-popup {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    text-decoration:none;
+    background:#fff;
+    color:#333;
+    border:none;
+    cursor:pointer;
+    pointer-events:auto;
+  }
+  /* Popup Image Full Width on Mobile */
+#modalImg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Mobile full-screen popup */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    border-radius: 0 !important;
+  }
+
+  #modalImg {
+    width: 100% !important;
+    height: auto !important;
+    max-height: 100vh !important;
+  }
+}
+
+
+  /* basic grid for demo */
+  .row.g-4 { display:flex; flex-wrap:wrap; gap:16px; margin-top:18px; }
+  .col-lg-3 { width:calc(25% - 12px); min-width:180px; }
+  .img-fluid { width:100%; display:block; border-radius:6px; }
+</style>
+</head>
+<body>
+
+<!-- ================= Your original markup (unchanged structure) ================= -->
 <div class="container-fluid py-5">
   <div class="container py-5">
     <div class="row justify-content-center">
@@ -238,305 +365,205 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         <h1 class="mb-4">Some Of Our Awesome Designing Projects</h1>
       </div>
     </div>
-<div id="imageModal" class="image-modal">
-<span class="close-modal">&times;</span>
-<img id="modalImg" class="modal-content-img">
-</div>
 
+    <!-- Modal (kept inside same DOM) -->
+    <div id="imageModal" class="image-modal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-inner" id="modalInner">
+        <img id="modalImg" class="modal-content-img" src="" alt="Enlarged image" draggable="false">
+      </div>
+      <button id="closeModal" class="close-modal" aria-label="Close image">&times;</button>
+    </div>
 
-<style>
-.category-btns li {
-      cursor: pointer;
-      padding: 8px 20px;
-      border: 1px solid #19191a;
-      border-radius: 30px;
-      margin: 5px;
-      display: inline-block;
-  }
-  .category-btns li.active {
-      background: #de8d4a;
-      color: #fff !important;
-  }
-.category-carousel {
-  display: none;
-}
-.category-carousel.active {
-  display: block;
-}
-.service-item-only-img {
-  width: 100%;
-  height: 280px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-</style>
+    <div class="col-12 text-center mb-4">
+      <ul class="list-inline" id="portfolio-flters">
+        <li class="btn btn-outline-primary m-1" data-filter=".first">Architecture</li>
+        <li class="btn btn-outline-primary m-1" data-filter=".second">Construction</li>
+        <li class="btn btn-outline-primary m-1" data-filter=".third">Interior</li>
+        <li class="btn btn-outline-primary m-1" data-filter=".four">Road Works</li>
+        <li class="btn btn-outline-primary m-1" data-filter=".fifth">Real Estate</li>
+      </ul>
+    </div>
+  </div>
 
+  <!-- Portfolio Grid -->
+  <div class="row g-4 portfolio-container">
+    <!-- Architecture (example items; keep your real src paths) -->
+    <div class="col-lg-3 col-md-6 portfolio-item first">
+      <div class="position-relative overflow-hidden">
+        <img class="img-fluid w-100" src="Architecture/37.jpg" alt="Project 1">
+        <div class="portfolio-overlay" aria-hidden="true">
+          <a href="Architecture/37.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-dark"></i></a>
+        </div>
+      </div>
+    </div>
 
-<!-- CATEGORY BUTTONS -->
-<div class="col-12 text-center mb-4">
-  <ul class="list-inline category-btns" id="category-filter">
-      <li class="active" data-target="arch">Architecture</li>
-      <li data-target="const">Construction</li>
-      <li data-target="interior">Interior</li>
-      <li data-target="road">Road Works</li>
-      <li data-target="real">Real Estate</li>
-  </ul>
-</div>
+    <div class="col-lg-3 col-md-6 portfolio-item first">
+      <div class="position-relative overflow-hidden">
+        <img class="img-fluid w-100" src="Architecture/38.jpg" alt="Project 2">
+        <div class="portfolio-overlay" aria-hidden="true">
+          <a href="Architecture/38.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-dark"></i></a>
+        </div>
+      </div>
+    </div>
 
-<!-- ARCHITECTURE CAROUSEL -->
-<div class="container-fluid p-0 category-carousel active" id="arch">
-<div class="owl-carousel arch-carousel">
-  <div class="service-item-only-img" style="background-image:url('Architecture/41.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/43.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/44.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/45.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/32.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/47.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/48.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/49.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/50.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/51.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/52.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/53.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/54.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/55.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/56.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/57.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/58.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/59.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/60.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/38.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/1.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/2.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/3.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/4.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/5.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/6.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/7.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/8.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/9.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/10.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/11.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/12.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/13.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/14.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/15.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/16.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/17.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/18.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/19.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/20.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/21.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/22.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/23.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/24.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/25.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/26.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/27.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/28.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/29.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/30.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/31.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/33.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/34.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/35.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/36.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/37.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/39.jpg')"></div>      
-</div>
-</div>
+    <div class="col-lg-3 col-md-6 portfolio-item first">
+      <div class="position-relative overflow-hidden">
+        <img class="img-fluid w-100" src="Architecture/39.jpg" alt="Project 3">
+        <div class="portfolio-overlay" aria-hidden="true">
+          <a href="Architecture/39.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-dark"></i></a>
+        </div>
+      </div>
+    </div>
 
-<!-- CONSTRUCTION CAROUSEL -->
-<div class="container-fluid p-0 category-carousel" id="const">
-<div class="owl-carousel const-carousel">
-  <div class="service-item-only-img" style="background-image:url('Architecture/50.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/51.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/52.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/53.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/54.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/55.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/56.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/1.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/2.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/3.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/4.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/5.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/6.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/7.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/8.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/9.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/10.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/11.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/12.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/13.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/14.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/15.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/16.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/17.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/18.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/19.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/20.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/21.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/22.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/23.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/24.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/25.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/26.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/27.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/28.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/29.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/30.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/31.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/33.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/34.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/35.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/36.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/37.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/39.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/41.jpg')"></div>      
-  <div class="service-item-only-img" style="background-image:url('Architecture/57.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/58.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/59.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/60.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/38.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/41.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/43.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/44.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/45.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/32.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/47.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/48.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Architecture/49.jpg')"></div>
-</div>
-</div>
+    <div class="col-lg-3 col-md-6 portfolio-item first">
+      <div class="position-relative overflow-hidden">
+        <img class="img-fluid w-100" src="Architecture/40.jpg" alt="Project 4">
+        <div class="portfolio-overlay" aria-hidden="true">
+          <a href="Architecture/40.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-dark"></i></a>
+        </div>
+      </div>
+    </div>
 
-<!-- INTERIOR CAROUSEL -->
-<div class="container-fluid p-0 category-carousel" id="interior">
-<div class="owl-carousel interior-carousel">
-  <div class="service-item-only-img" style="background-image:url('Interior/1.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/2.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/3.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/4.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/5.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/6.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/7.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/8.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/9.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/10.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/11.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/12.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/13.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/14.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/15.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/16.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/17.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/18.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/19.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/20.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/21.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/22.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/23.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/24.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/25.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/26.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/27.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/28.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/29.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/30.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/31.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/32.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/33.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/34.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/35.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/36.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/37.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/38.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/39.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/40.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/41.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/42.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/43.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/44.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Interior/45.jpg')"></div>
+  </div>
 </div>
-</div>
-
-<!-- ROAD WORKS CAROUSEL -->
-<div class="container-fluid p-0 category-carousel" id="road">
-<div class="owl-carousel road-carousel">
-  <div class="service-item-only-img" style="background-image:url('')"></div>
-  <div class="service-item-only-img" style="background-image:url('')"></div>
-  <div class="service-item-only-img" style="background-image:url('')"></div>
-  <div class="service-item-only-img" style="background-image:url('')"></div>
-  <div class="service-item-only-img" style="background-image:url('')"></div>
-</div>
-</div>
-
-<!-- REAL ESTATE CAROUSEL -->
-<div class="container-fluid p-0 category-carousel" id="real">
-<div class="owl-carousel real-carousel">
-  <div class="service-item-only-img" style="background-image:url('Realestate/1.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/2.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/3.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/4.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/5.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/6.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/7.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/8.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/9.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/10.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/11.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/12.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/13.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/14.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/15.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/16.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/17.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/18.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/19.jpg')"></div>
-  <div class="service-item-only-img" style="background-image:url('Realestate/20.jpg')"></div>      
-</div>
-</div>
-
-<!-- jQuery + Owl JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<!-- =============================================================================== -->
 
 <script>
-// Owl Initialization
-$('.owl-carousel').owlCarousel({
-  loop:true,
-  margin:10,
-  autoplay:true,
-  autoplayTimeout:4000,
-  autoplayHoverPause:true,
-  dots:false,
-  nav:false,
-  smartSpeed:1500,
-  responsive:{
-      0:{ items:1 },
-      600:{ items:2 },
-      1000:{ items:3 }
+/*
+  Defensive popup logic:
+  - Convert any plus icon anchors (with or without data-lightbox) into open-popup controls
+  - Handle click and touchstart reliably on mobile
+  - Prevent page/background interactions while modal open
+  - Only close with X or Escape
+*/
+
+(function () {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.getElementById('closeModal');
+  const portfolioContainer = document.querySelector('.portfolio-container');
+
+  let isOpen = false;
+
+  // 1) Normalize plus icons: ensure they have class "open-popup" and remove data-lightbox to avoid plugin conflicts
+  function normalizePlusIcons() {
+    const possibleIcons = portfolioContainer.querySelectorAll('a[href], button[data-src]');
+    possibleIcons.forEach(el => {
+      // If it's an anchor inside .portfolio-overlay and contains .fa-plus icon, treat as plus
+      if (el.closest('.portfolio-overlay')) {
+        el.classList.add('open-popup');
+        // remove data-lightbox attribute to disable 3rd-party lightbox plugins
+        if (el.hasAttribute('data-lightbox')) el.removeAttribute('data-lightbox');
+      }
+    });
+
+    // also convert icons that are plain <a> without data-lightbox but with an <i> plus inside
+    portfolioContainer.querySelectorAll('.portfolio-overlay a').forEach(a => {
+      if (!a.classList.contains('open-popup')) {
+        a.classList.add('open-popup');
+        if (a.hasAttribute('data-lightbox')) a.removeAttribute('data-lightbox');
+      }
+    });
   }
-});
 
-// Category Filter
-$("#category-filter li").click(function(){
-  $("#category-filter li").removeClass("active");
-  $(this).addClass("active");
+  normalizePlusIcons();
 
-  let target = $(this).attr("data-target");
+  // 2) Open modal safely
+  function openModal(src, altText) {
+    if (!src) {
+      console.warn('openModal called without src');
+      return;
+    }
+    modalImg.src = src;
+    modalImg.alt = altText || 'Enlarged project image';
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    isOpen = true;
+    // prevent background scroll / interactions
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    console.log('Modal opened:', src);
+    // focus close button for keyboard users
+    closeBtn.focus();
+  }
 
-  $(".category-carousel").removeClass("active").hide();
-  $("#" + target).fadeIn(300).addClass("active");
-});
+  // 3) Close modal safely
+  function closeModal() {
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    isOpen = false;
+    // release src after small delay
+    setTimeout(() => { modalImg.src = ''; }, 200);
+    document.documentElement.style.overflow = '';
+    document.body.style.overflow = '';
+    console.log('Modal closed');
+  }
+
+  // 4) Delegate handler for open-popup - works for anchors/buttons added later too
+  document.addEventListener('click', function (ev) {
+    const openEl = ev.target.closest && ev.target.closest('.open-popup');
+    if (!openEl) return;
+    ev.preventDefault();
+    ev.stopPropagation();
+
+    // determine src from href or data-src
+    const src = openEl.getAttribute('href') || openEl.getAttribute('data-src') || openEl.dataset.src;
+    const alt = openEl.closest('.portfolio-item')?.querySelector('img')?.alt || '';
+    openModal(src, alt);
+  }, { passive: false });
+
+  // also handle touchstart for mobile reliability (some browsers treat click differently)
+  document.addEventListener('touchstart', function (ev) {
+    const openEl = ev.target.closest && ev.target.closest('.open-popup');
+    if (!openEl) return;
+    // prevent immediate navigation on anchor taps
+    ev.preventDefault();
+    ev.stopPropagation();
+    const src = openEl.getAttribute('href') || openEl.getAttribute('data-src') || openEl.dataset.src;
+    const alt = openEl.closest('.portfolio-item')?.querySelector('img')?.alt || '';
+    openModal(src, alt);
+  }, { passive: false });
+
+  // 5) Close only by X button
+  closeBtn.addEventListener('click', function (ev) {
+    ev.preventDefault();
+    ev.stopPropagation();
+    closeModal();
+  }, { passive: false });
+
+  // 6) Prevent any clicks/touches inside modal from closing it accidentally
+  modal.addEventListener('click', function (ev) {
+    // swallow clicks/taps on the modal (do nothing)
+    ev.stopPropagation && ev.stopPropagation();
+  }, { passive: false });
+
+  modalImg.addEventListener('click', function (ev) {
+    // do nothing — keeps image stable on touch
+    ev.stopPropagation && ev.stopPropagation();
+  }, { passive: false });
+
+  // 7) Keyboard support: Escape closes modal
+  document.addEventListener('keydown', function (ev) {
+    if (!isOpen) return;
+    if (ev.key === 'Escape' || ev.key === 'Esc') {
+      ev.preventDefault();
+      closeModal();
+    }
+  });
+
+  // 8) Defensive: if a third-party script later re-adds data-lightbox or modifies anchors, re-run normalize on focus
+  window.addEventListener('focus', function () {
+    normalizePlusIcons();
+  });
+
+  // Expose for debugging if needed
+  window.__portfolioModal = { openModal, closeModal, isOpen: () => isOpen };
+
+})();
 </script>
+</body>
+</html>
 
-</div>
-
-</div>
-</div>
 <!-- Portfolio Section End -->
 
     
