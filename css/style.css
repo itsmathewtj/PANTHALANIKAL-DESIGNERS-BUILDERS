@@ -508,34 +508,6 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 
 
-.image-modal {
-  display: none;
-  position: fixed;
-  z-index: 99999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  text-align: center;
-  padding-top: 60px;
-}
-
-.modal-content-img {
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-}
-
-.close-modal {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: #fff;
-  font-size: 40px;
-  cursor: pointer;
-  z-index: 999999;
-}
 
 
 

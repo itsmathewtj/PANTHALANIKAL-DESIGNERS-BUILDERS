@@ -230,7 +230,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
 
 <!-- Portfolio Section Start -->
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -239,15 +239,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
-  /* Keep your page styles — modal-specific styles below */
-  .container-fluid { padding: 30px; font-family: system-ui, Arial, sans-serif; }
+   .container-fluid { padding: 30px; font-family: system-ui, Arial, sans-serif; }
 
   /* Modal */
   .image-modal {
     display: none;
     position: fixed;
-    inset: 0;                    /* top:0; right:0; bottom:0; left:0 */
-    z-index: 2147483646;         /* extremely high to avoid interference */
+    inset: 0;                     
+    z-index: 2147483646;          
     background: rgba(0,0,0,0.9);
     align-items: center;
     justify-content: center;
@@ -290,8 +289,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     cursor: pointer;
   }
 
-  /* Portfolio overlay / plus icon area */
-  .position-relative { position: relative; overflow: hidden; }
+   .position-relative { position: relative; overflow: hidden; }
   .portfolio-overlay {
     position: absolute;
     inset: 0;
@@ -300,7 +298,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     justify-content:center;
     opacity: 0;
     transition: opacity .18s ease;
-    pointer-events: none; /* overlay itself doesn't capture clicks */
+    pointer-events: none;  
   }
   .position-relative:hover .portfolio-overlay,
   .position-relative:focus-within .portfolio-overlay { opacity:1; pointer-events:auto; }
@@ -320,13 +318,11 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     pointer-events:auto;
   }
 
-  /* basic grid for demo */
-  .row.g-4 { display:flex; flex-wrap:wrap; gap:16px; margin-top:18px; }
+   .row.g-4 { display:flex; flex-wrap:wrap; gap:16px; margin-top:18px; }
   .col-lg-3 { width:calc(25% - 12px); min-width:180px; }
   .img-fluid { width:100%; display:block; border-radius:6px; }
 
-  /* FULL WIDTH IMAGES IN MOBILE */
-@media (max-width: 768px) {
+ @media (max-width: 768px) {
   .portfolio-container .col-lg-3,
   .portfolio-container .col-md-6 {
     width: 100% !important;
@@ -342,36 +338,31 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     gap: 20px !important;
   }
 }
-/* Make images full-width and control grid columns */
-.portfolio-container {
+ .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);  /* 4 images per row on PC */
+  grid-template-columns: repeat(4, 1fr);   
   gap: 20px;
 }
 
-/* Tablet – 2 images */
-@media (max-width: 991px) {
+ @media (max-width: 991px) {
   .portfolio-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile – 1 full width image */
-@media (max-width: 575px) {
+ @media (max-width: 575px) {
   .portfolio-container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-/* Make images fill the full cell */
-.portfolio-item img {
+ .portfolio-item img {
   width: 100%;
   height: auto;
   object-fit: cover;
 }
 
-/* Remove Bootstrap column width so our grid works */
-.portfolio-item {
+ .portfolio-item {
   width: 100% !important;
   padding: 0 !important;
 }
@@ -380,8 +371,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 </head>
 <body>
 
-<!-- ================= Your original markup (unchanged structure) ================= -->
-<div class="container-fluid py-5">
+ <div class="container-fluid py-5">
   <div class="container py-5">
     <div class="row justify-content-center">
       <div class="col-lg-6 col-md-8 text-center mb-4">
@@ -390,8 +380,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       </div>
     </div>
 
-    <!-- Modal (kept inside same DOM) -->
-    <div id="imageModal" class="image-modal" role="dialog" aria-modal="true" aria-hidden="true">
+     <div id="imageModal" class="image-modal" role="dialog" aria-modal="true" aria-hidden="true">
       <div class="modal-inner" id="modalInner">
         <img id="modalImg" class="modal-content-img" src="" alt="Enlarged image" draggable="false">
       </div>
@@ -409,57 +398,165 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     </div>
   </div>
 
-  <!-- Portfolio Grid -->
-  <div class="row g-4 portfolio-container">
-    <!-- Architecture (example items; keep your real src paths) -->
-    <div class="col-lg-3 col-md-6 portfolio-item first">
-      <div class="position-relative overflow-hidden">
-        <img class="img-fluid w-100" src="Architecture/37.jpg" alt="Project 1">
-        <div class="portfolio-overlay" aria-hidden="true">
-          <a href="Architecture/37.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-dark"></i></a>
-        </div>
-      </div>
-    </div>
+    
+<div class="row g-4 portfolio-container">
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/43.jpg"><div class="portfolio-overlay"><a href="Architecture/43.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/44.jpg"><div class="portfolio-overlay"><a href="Architecture/44.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/45.jpg"><div class="portfolio-overlay"><a href="Architecture/45.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/47.jpg"><div class="portfolio-overlay"><a href="Architecture/47.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/48.jpg"><div class="portfolio-overlay"><a href="Architecture/48.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/49.jpg"><div class="portfolio-overlay"><a href="Architecture/49.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/50.jpg"><div class="portfolio-overlay"><a href="Architecture/50.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/51.jpg"><div class="portfolio-overlay"><a href="Architecture/51.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/52.jpg"><div class="portfolio-overlay"><a href="Architecture/52.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/53.jpg"><div class="portfolio-overlay"><a href="Architecture/53.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/54.jpg"><div class="portfolio-overlay"><a href="Architecture/54.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/55.jpg"><div class="portfolio-overlay"><a href="Architecture/55.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/56.jpg"><div class="portfolio-overlay"><a href="Architecture/56.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/57.jpg"><div class="portfolio-overlay"><a href="Architecture/57.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/58.jpg"><div class="portfolio-overlay"><a href="Architecture/58.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/59.jpg"><div class="portfolio-overlay"><a href="Architecture/59.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/60.jpg"><div class="portfolio-overlay"><a href="Architecture/60.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/38.jpg"><div class="portfolio-overlay"><a href="Architecture/38.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/1.jpg"><div class="portfolio-overlay"><a href="Architecture/1.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/2.jpg"><div class="portfolio-overlay"><a href="Architecture/2.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/3.jpg"><div class="portfolio-overlay"><a href="Architecture/3.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/4.jpg"><div class="portfolio-overlay"><a href="Architecture/4.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/5.jpg"><div class="portfolio-overlay"><a href="Architecture/5.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/6.jpg"><div class="portfolio-overlay"><a href="Architecture/6.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/7.jpg"><div class="portfolio-overlay"><a href="Architecture/7.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/8.jpg"><div class="portfolio-overlay"><a href="Architecture/8.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/9.jpg"><div class="portfolio-overlay"><a href="Architecture/9.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/10.jpg"><div class="portfolio-overlay"><a href="Architecture/10.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/12.jpg"><div class="portfolio-overlay"><a href="Architecture/12.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/13.jpg"><div class="portfolio-overlay"><a href="Architecture/13.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/14.jpg"><div class="portfolio-overlay"><a href="Architecture/14.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/15.jpg"><div class="portfolio-overlay"><a href="Architecture/15.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/16.jpg"><div class="portfolio-overlay"><a href="Architecture/16.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/17.jpg"><div class="portfolio-overlay"><a href="Architecture/17.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/18.jpg"><div class="portfolio-overlay"><a href="Architecture/18.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/27.jpg"><div class="portfolio-overlay"><a href="Architecture/27.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/28.jpg"><div class="portfolio-overlay"><a href="Architecture/28.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/29.jpg"><div class="portfolio-overlay"><a href="Architecture/29.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/30.jpg"><div class="portfolio-overlay"><a href="Architecture/30.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/31.jpg"><div class="portfolio-overlay"><a href="Architecture/31.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/33.jpg"><div class="portfolio-overlay"><a href="Architecture/33.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/34.jpg"><div class="portfolio-overlay"><a href="Architecture/34.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/35.jpg"><div class="portfolio-overlay"><a href="Architecture/35.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/36.jpg"><div class="portfolio-overlay"><a href="Architecture/36.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/37.jpg"><div class="portfolio-overlay"><a href="Architecture/37.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/39.jpg"><div class="portfolio-overlay"><a href="Architecture/39.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
 
-    <div class="col-lg-3 col-md-6 portfolio-item first">
-      <div class="position-relative overflow-hidden">
-        <img class="img-fluid w-100" src="Architecture/38.jpg" alt="Project 2">
-        <div class="portfolio-overlay" aria-hidden="true">
-          <a href="Architecture/38.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-dark"></i></a>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-lg-3 col-md-6 portfolio-item first">
-      <div class="position-relative overflow-hidden">
-        <img class="img-fluid w-100" src="Architecture/39.jpg" alt="Project 3">
-        <div class="portfolio-overlay" aria-hidden="true">
-          <a href="Architecture/39.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-dark"></i></a>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-lg-3 col-md-6 portfolio-item first">
-      <div class="position-relative overflow-hidden">
-        <img class="img-fluid w-100" src="Architecture/40.jpg" alt="Project 4">
-        <div class="portfolio-overlay" aria-hidden="true">
-          <a href="Architecture/40.jpg" data-lightbox="portfolio"><i class="fa fa-plus fa-2x text-dark"></i></a>
-        </div>
-      </div>
-    </div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/2.jpg"><div class="portfolio-overlay"><a href="Architecture/2.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/3.jpg"><div class="portfolio-overlay"><a href="Architecture/3.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/4.jpg"><div class="portfolio-overlay"><a href="Architecture/4.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/5.jpg"><div class="portfolio-overlay"><a href="Architecture/5.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/6.jpg"><div class="portfolio-overlay"><a href="Architecture/6.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/7.jpg"><div class="portfolio-overlay"><a href="Architecture/7.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/8.jpg"><div class="portfolio-overlay"><a href="Architecture/8.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/9.jpg"><div class="portfolio-overlay"><a href="Architecture/9.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/10.jpg"><div class="portfolio-overlay"><a href="Architecture/10.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/12.jpg"><div class="portfolio-overlay"><a href="Architecture/12.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/13.jpg"><div class="portfolio-overlay"><a href="Architecture/13.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/14.jpg"><div class="portfolio-overlay"><a href="Architecture/14.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/15.jpg"><div class="portfolio-overlay"><a href="Architecture/15.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/16.jpg"><div class="portfolio-overlay"><a href="Architecture/16.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/17.jpg"><div class="portfolio-overlay"><a href="Architecture/17.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/18.jpg"><div class="portfolio-overlay"><a href="Architecture/18.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/27.jpg"><div class="portfolio-overlay"><a href="Architecture/27.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/28.jpg"><div class="portfolio-overlay"><a href="Architecture/28.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/29.jpg"><div class="portfolio-overlay"><a href="Architecture/29.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/30.jpg"><div class="portfolio-overlay"><a href="Architecture/30.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/31.jpg"><div class="portfolio-overlay"><a href="Architecture/31.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/33.jpg"><div class="portfolio-overlay"><a href="Architecture/33.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/34.jpg"><div class="portfolio-overlay"><a href="Architecture/34.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/35.jpg"><div class="portfolio-overlay"><a href="Architecture/35.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/36.jpg"><div class="portfolio-overlay"><a href="Architecture/36.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/54.jpg"><div class="portfolio-overlay"><a href="Architecture/54.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/53.jpg"><div class="portfolio-overlay"><a href="Architecture/53.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/37.jpg"><div class="portfolio-overlay"><a href="Architecture/37.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/39.jpg"><div class="portfolio-overlay"><a href="Architecture/39.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
 
-  </div>
+
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/1.jpg"><div class="portfolio-overlay"><a href="Interior/1.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/2.jpg"><div class="portfolio-overlay"><a href="Interior/2.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/5.jpg"><div class="portfolio-overlay"><a href="Interior/5.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/3.jpg"><div class="portfolio-overlay"><a href="Interior/3.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/9.jpg"><div class="portfolio-overlay"><a href="Interior/9.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/6.jpg"><div class="portfolio-overlay"><a href="Interior/6.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/7.jpg"><div class="portfolio-overlay"><a href="Interior/7.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/8.jpg"><div class="portfolio-overlay"><a href="Interior/8.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/10.jpg"><div class="portfolio-overlay"><a href="Interior/10.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/11.jpg"><div class="portfolio-overlay"><a href="Interior/11.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/12.jpg"><div class="portfolio-overlay"><a href="Interior/12.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/13.jpg"><div class="portfolio-overlay"><a href="Interior/13.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/14.jpg"><div class="portfolio-overlay"><a href="Interior/14.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/4.jpg"><div class="portfolio-overlay"><a href="Interior/4.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/15.jpg"><div class="portfolio-overlay"><a href="Interior/15.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/16.jpg"><div class="portfolio-overlay"><a href="Interior/16.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/17.jpg"><div class="portfolio-overlay"><a href="Interior/17.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/18.jpg"><div class="portfolio-overlay"><a href="Interior/18.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/19.jpg"><div class="portfolio-overlay"><a href="Interior/19.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/20.jpg"><div class="portfolio-overlay"><a href="Interior/20.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/21.jpg"><div class="portfolio-overlay"><a href="Interior/21.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/22.jpg"><div class="portfolio-overlay"><a href="Interior/22.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/23.jpg"><div class="portfolio-overlay"><a href="Interior/23.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/24.jpg"><div class="portfolio-overlay"><a href="Interior/24.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/25.jpg"><div class="portfolio-overlay"><a href="Interior/25.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/26.jpg"><div class="portfolio-overlay"><a href="Interior/26.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/27.jpg"><div class="portfolio-overlay"><a href="Interior/27.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/28.jpg"><div class="portfolio-overlay"><a href="Interior/28.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/29.jpg"><div class="portfolio-overlay"><a href="Interior/29.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/30.jpg"><div class="portfolio-overlay"><a href="Interior/30.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/31.jpg"><div class="portfolio-overlay"><a href="Interior/31.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/32.jpg"><div class="portfolio-overlay"><a href="Interior/32.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/33.jpg"><div class="portfolio-overlay"><a href="Interior/33.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/34.jpg"><div class="portfolio-overlay"><a href="Interior/34.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/35.jpg"><div class="portfolio-overlay"><a href="Interior/35.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/36.jpg"><div class="portfolio-overlay"><a href="Interior/36.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/37.jpg"><div class="portfolio-overlay"><a href="Interior/37.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/38.jpg"><div class="portfolio-overlay"><a href="Interior/38.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/39.jpg"><div class="portfolio-overlay"><a href="Interior/39.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/40.jpg"><div class="portfolio-overlay"><a href="Interior/40.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/41.jpg"><div class="portfolio-overlay"><a href="Interior/41.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/43.jpg"><div class="portfolio-overlay"><a href="Interior/43.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/44.jpg"><div class="portfolio-overlay"><a href="Interior/44.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/45.jpg"><div class="portfolio-overlay"><a href="Interior/45.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+
+  <div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/1.jpg"><div class="portfolio-overlay"><a href="Realestate/1.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/2.jpg"><div class="portfolio-overlay"><a href="Realestate/2.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/3.jpg"><div class="portfolio-overlay"><a href="Realestate/3.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/4.jpg"><div class="portfolio-overlay"><a href="Realestate/4.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/5.jpg"><div class="portfolio-overlay"><a href="Realestate/5.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/6.jpg"><div class="portfolio-overlay"><a href="Realestate/6.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/7.jpg"><div class="portfolio-overlay"><a href="Realestate/7.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/8.jpg"><div class="portfolio-overlay"><a href="Realestate/8.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/9.jpg"><div class="portfolio-overlay"><a href="Realestate/9.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/10.jpg"><div class="portfolio-overlay"><a href="Realestate/10.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/11.jpg"><div class="portfolio-overlay"><a href="Realestate/11.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/12.jpg"><div class="portfolio-overlay"><a href="Realestate/12.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/13.jpg"><div class="portfolio-overlay"><a href="Realestate/13.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/14.jpg"><div class="portfolio-overlay"><a href="Realestate/14.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/15.jpg"><div class="portfolio-overlay"><a href="Realestate/15.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/16.jpg"><div class="portfolio-overlay"><a href="Realestate/16.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/17.jpg"><div class="portfolio-overlay"><a href="Realestate/17.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/18.jpg"><div class="portfolio-overlay"><a href="Realestate/18.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/19.jpg"><div class="portfolio-overlay"><a href="Realestate/19.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/20.jpg"><div class="portfolio-overlay"><a href="Realestate/20.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+
+
+
 </div>
-<!-- =============================================================================== -->
 
+
+</div>
+
+
+ 
 <script>
-/*
-  Defensive popup logic:
-  - Convert any plus icon anchors (with or without data-lightbox) into open-popup controls
-  - Handle click and touchstart reliably on mobile
-  - Prevent page/background interactions while modal open
-  - Only close with X or Escape
-*/
+ 
 
 (function () {
   const modal = document.getElementById('imageModal');
@@ -469,15 +566,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
   let isOpen = false;
 
-  // 1) Normalize plus icons: ensure they have class "open-popup" and remove data-lightbox to avoid plugin conflicts
-  function normalizePlusIcons() {
+   function normalizePlusIcons() {
     const possibleIcons = portfolioContainer.querySelectorAll('a[href], button[data-src]');
     possibleIcons.forEach(el => {
-      // If it's an anchor inside .portfolio-overlay and contains .fa-plus icon, treat as plus
-      if (el.closest('.portfolio-overlay')) {
+       if (el.closest('.portfolio-overlay')) {
         el.classList.add('open-popup');
-        // remove data-lightbox attribute to disable 3rd-party lightbox plugins
-        if (el.hasAttribute('data-lightbox')) el.removeAttribute('data-lightbox');
+         if (el.hasAttribute('data-lightbox')) el.removeAttribute('data-lightbox');
       }
     });
 
@@ -492,8 +586,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
   normalizePlusIcons();
 
-  // 2) Open modal safely
-  function openModal(src, altText) {
+   function openModal(src, altText) {
     if (!src) {
       console.warn('openModal called without src');
       return;
@@ -503,71 +596,58 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     modal.classList.add('show');
     modal.setAttribute('aria-hidden', 'false');
     isOpen = true;
-    // prevent background scroll / interactions
-    document.documentElement.style.overflow = 'hidden';
+     document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
     console.log('Modal opened:', src);
-    // focus close button for keyboard users
-    closeBtn.focus();
+     closeBtn.focus();
   }
 
-  // 3) Close modal safely
-  function closeModal() {
+   function closeModal() {
     modal.classList.remove('show');
     modal.setAttribute('aria-hidden', 'true');
     isOpen = false;
-    // release src after small delay
-    setTimeout(() => { modalImg.src = ''; }, 200);
+     setTimeout(() => { modalImg.src = ''; }, 200);
     document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
     console.log('Modal closed');
   }
 
-  // 4) Delegate handler for open-popup - works for anchors/buttons added later too
-  document.addEventListener('click', function (ev) {
+   document.addEventListener('click', function (ev) {
     const openEl = ev.target.closest && ev.target.closest('.open-popup');
     if (!openEl) return;
     ev.preventDefault();
     ev.stopPropagation();
 
-    // determine src from href or data-src
-    const src = openEl.getAttribute('href') || openEl.getAttribute('data-src') || openEl.dataset.src;
+     const src = openEl.getAttribute('href') || openEl.getAttribute('data-src') || openEl.dataset.src;
     const alt = openEl.closest('.portfolio-item')?.querySelector('img')?.alt || '';
     openModal(src, alt);
   }, { passive: false });
 
-  // also handle touchstart for mobile reliability (some browsers treat click differently)
-  document.addEventListener('touchstart', function (ev) {
+   document.addEventListener('touchstart', function (ev) {
     const openEl = ev.target.closest && ev.target.closest('.open-popup');
     if (!openEl) return;
-    // prevent immediate navigation on anchor taps
-    ev.preventDefault();
+     ev.preventDefault();
     ev.stopPropagation();
     const src = openEl.getAttribute('href') || openEl.getAttribute('data-src') || openEl.dataset.src;
     const alt = openEl.closest('.portfolio-item')?.querySelector('img')?.alt || '';
     openModal(src, alt);
   }, { passive: false });
 
-  // 5) Close only by X button
-  closeBtn.addEventListener('click', function (ev) {
+   closeBtn.addEventListener('click', function (ev) {
     ev.preventDefault();
     ev.stopPropagation();
     closeModal();
   }, { passive: false });
 
-  // 6) Prevent any clicks/touches inside modal from closing it accidentally
-  modal.addEventListener('click', function (ev) {
-    // swallow clicks/taps on the modal (do nothing)
-    ev.stopPropagation && ev.stopPropagation();
+   modal.addEventListener('click', function (ev) {
+     ev.stopPropagation && ev.stopPropagation();
   }, { passive: false });
 
   modalImg.addEventListener('click', function (ev) {
-    // do nothing — keeps image stable on touch
-    ev.stopPropagation && ev.stopPropagation();
+     ev.stopPropagation && ev.stopPropagation();
   }, { passive: false });
 
-  // 7) Keyboard support: Escape closes modal
-  document.addEventListener('keydown', function (ev) {
+   document.addEventListener('keydown', function (ev) {
     if (!isOpen) return;
     if (ev.key === 'Escape' || ev.key === 'Esc') {
       ev.preventDefault();
@@ -575,21 +655,203 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     }
   });
 
-  // 8) Defensive: if a third-party script later re-adds data-lightbox or modifies anchors, re-run normalize on focus
-  window.addEventListener('focus', function () {
+   window.addEventListener('focus', function () {
     normalizePlusIcons();
   });
 
-  // Expose for debugging if needed
-  window.__portfolioModal = { openModal, closeModal, isOpen: () => isOpen };
+   window.__portfolioModal = { openModal, closeModal, isOpen: () => isOpen };
 
 })();
 </script>
 </body>
-</html>
+</html> -->
+
+
+<div class="container-fluid py-5">
+  <div class="container py-5">
+
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8 text-center mb-4">
+        <h6 class="text-primary font-weight-normal text-uppercase mb-3">Our Projects</h6>
+        <h1 class="mb-4">Some Of Our Awesome Designing Projects</h1>
+      </div>
+    </div>
+
+    <!-- ✅ CATEGORY SECTION GOES HERE -->
+    <div class="col-12 text-center mb-4">
+      <ul class="list-inline" id="portfolio-flters">
+          <li class="btn btn-outline-primary m-1 active" data-filter=".first">Architecture</li>
+          <li class="btn btn-outline-primary m-1" data-filter=".second">Construction</li>
+          <li class="btn btn-outline-primary m-1" data-filter=".third">Interior Designing</li>
+          <li class="btn btn-outline-primary m-1" data-filter=".four">Road Works</li>
+          <li class="btn btn-outline-primary m-1" data-filter=".fifth">Real Estate</li>
+      </ul>
+  </div>
+    <!-- ✅ CATEGORY SECTION END -->
+
+    <!-- IMAGE GRID START -->
+    <div class="row g-4 portfolio-container">
+
+
+      <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/43.jpg"><div class="portfolio-overlay"><a href="Architecture/43.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/44.jpg"><div class="portfolio-overlay"><a href="Architecture/44.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/45.jpg"><div class="portfolio-overlay"><a href="Architecture/45.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/47.jpg"><div class="portfolio-overlay"><a href="Architecture/47.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/48.jpg"><div class="portfolio-overlay"><a href="Architecture/48.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/49.jpg"><div class="portfolio-overlay"><a href="Architecture/49.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/50.jpg"><div class="portfolio-overlay"><a href="Architecture/50.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/51.jpg"><div class="portfolio-overlay"><a href="Architecture/51.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/52.jpg"><div class="portfolio-overlay"><a href="Architecture/52.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/53.jpg"><div class="portfolio-overlay"><a href="Architecture/53.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/54.jpg"><div class="portfolio-overlay"><a href="Architecture/54.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/55.jpg"><div class="portfolio-overlay"><a href="Architecture/55.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/56.jpg"><div class="portfolio-overlay"><a href="Architecture/56.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/57.jpg"><div class="portfolio-overlay"><a href="Architecture/57.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/58.jpg"><div class="portfolio-overlay"><a href="Architecture/58.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/59.jpg"><div class="portfolio-overlay"><a href="Architecture/59.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/60.jpg"><div class="portfolio-overlay"><a href="Architecture/60.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/38.jpg"><div class="portfolio-overlay"><a href="Architecture/38.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/1.jpg"><div class="portfolio-overlay"><a href="Architecture/1.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/2.jpg"><div class="portfolio-overlay"><a href="Architecture/2.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/3.jpg"><div class="portfolio-overlay"><a href="Architecture/3.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/4.jpg"><div class="portfolio-overlay"><a href="Architecture/4.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/5.jpg"><div class="portfolio-overlay"><a href="Architecture/5.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/6.jpg"><div class="portfolio-overlay"><a href="Architecture/6.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/7.jpg"><div class="portfolio-overlay"><a href="Architecture/7.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/8.jpg"><div class="portfolio-overlay"><a href="Architecture/8.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/9.jpg"><div class="portfolio-overlay"><a href="Architecture/9.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/10.jpg"><div class="portfolio-overlay"><a href="Architecture/10.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/12.jpg"><div class="portfolio-overlay"><a href="Architecture/12.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/13.jpg"><div class="portfolio-overlay"><a href="Architecture/13.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/14.jpg"><div class="portfolio-overlay"><a href="Architecture/14.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/15.jpg"><div class="portfolio-overlay"><a href="Architecture/15.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/16.jpg"><div class="portfolio-overlay"><a href="Architecture/16.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/17.jpg"><div class="portfolio-overlay"><a href="Architecture/17.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/18.jpg"><div class="portfolio-overlay"><a href="Architecture/18.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/27.jpg"><div class="portfolio-overlay"><a href="Architecture/27.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/28.jpg"><div class="portfolio-overlay"><a href="Architecture/28.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/29.jpg"><div class="portfolio-overlay"><a href="Architecture/29.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/30.jpg"><div class="portfolio-overlay"><a href="Architecture/30.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/31.jpg"><div class="portfolio-overlay"><a href="Architecture/31.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/33.jpg"><div class="portfolio-overlay"><a href="Architecture/33.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/34.jpg"><div class="portfolio-overlay"><a href="Architecture/34.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/35.jpg"><div class="portfolio-overlay"><a href="Architecture/35.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/36.jpg"><div class="portfolio-overlay"><a href="Architecture/36.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/37.jpg"><div class="portfolio-overlay"><a href="Architecture/37.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item first"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/39.jpg"><div class="portfolio-overlay"><a href="Architecture/39.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+
+
+
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/2.jpg"><div class="portfolio-overlay"><a href="Architecture/2.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/3.jpg"><div class="portfolio-overlay"><a href="Architecture/3.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/4.jpg"><div class="portfolio-overlay"><a href="Architecture/4.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/5.jpg"><div class="portfolio-overlay"><a href="Architecture/5.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/6.jpg"><div class="portfolio-overlay"><a href="Architecture/6.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/7.jpg"><div class="portfolio-overlay"><a href="Architecture/7.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/8.jpg"><div class="portfolio-overlay"><a href="Architecture/8.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/9.jpg"><div class="portfolio-overlay"><a href="Architecture/9.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/10.jpg"><div class="portfolio-overlay"><a href="Architecture/10.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/12.jpg"><div class="portfolio-overlay"><a href="Architecture/12.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/13.jpg"><div class="portfolio-overlay"><a href="Architecture/13.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/14.jpg"><div class="portfolio-overlay"><a href="Architecture/14.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/15.jpg"><div class="portfolio-overlay"><a href="Architecture/15.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/16.jpg"><div class="portfolio-overlay"><a href="Architecture/16.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/17.jpg"><div class="portfolio-overlay"><a href="Architecture/17.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/18.jpg"><div class="portfolio-overlay"><a href="Architecture/18.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/27.jpg"><div class="portfolio-overlay"><a href="Architecture/27.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/28.jpg"><div class="portfolio-overlay"><a href="Architecture/28.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/29.jpg"><div class="portfolio-overlay"><a href="Architecture/29.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/30.jpg"><div class="portfolio-overlay"><a href="Architecture/30.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/31.jpg"><div class="portfolio-overlay"><a href="Architecture/31.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/33.jpg"><div class="portfolio-overlay"><a href="Architecture/33.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/34.jpg"><div class="portfolio-overlay"><a href="Architecture/34.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/35.jpg"><div class="portfolio-overlay"><a href="Architecture/35.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/36.jpg"><div class="portfolio-overlay"><a href="Architecture/36.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/54.jpg"><div class="portfolio-overlay"><a href="Architecture/54.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 col-12 portfolio-item first"><div class="position-relative"><img class="img-fluid w-100" src="Architecture/53.jpg"><div class="portfolio-overlay"><a href="Architecture/53.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/37.jpg"><div class="portfolio-overlay"><a href="Architecture/37.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item second"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Architecture/39.jpg"><div class="portfolio-overlay"><a href="Architecture/39.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+
+
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/1.jpg"><div class="portfolio-overlay"><a href="Interior/1.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/2.jpg"><div class="portfolio-overlay"><a href="Interior/2.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/5.jpg"><div class="portfolio-overlay"><a href="Interior/5.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/3.jpg"><div class="portfolio-overlay"><a href="Interior/3.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/9.jpg"><div class="portfolio-overlay"><a href="Interior/9.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/6.jpg"><div class="portfolio-overlay"><a href="Interior/6.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/7.jpg"><div class="portfolio-overlay"><a href="Interior/7.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/8.jpg"><div class="portfolio-overlay"><a href="Interior/8.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/10.jpg"><div class="portfolio-overlay"><a href="Interior/10.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/11.jpg"><div class="portfolio-overlay"><a href="Interior/11.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/12.jpg"><div class="portfolio-overlay"><a href="Interior/12.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/13.jpg"><div class="portfolio-overlay"><a href="Interior/13.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/14.jpg"><div class="portfolio-overlay"><a href="Interior/14.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/4.jpg"><div class="portfolio-overlay"><a href="Interior/4.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/15.jpg"><div class="portfolio-overlay"><a href="Interior/15.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/16.jpg"><div class="portfolio-overlay"><a href="Interior/16.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/17.jpg"><div class="portfolio-overlay"><a href="Interior/17.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/18.jpg"><div class="portfolio-overlay"><a href="Interior/18.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/19.jpg"><div class="portfolio-overlay"><a href="Interior/19.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/20.jpg"><div class="portfolio-overlay"><a href="Interior/20.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/21.jpg"><div class="portfolio-overlay"><a href="Interior/21.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/22.jpg"><div class="portfolio-overlay"><a href="Interior/22.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/23.jpg"><div class="portfolio-overlay"><a href="Interior/23.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/24.jpg"><div class="portfolio-overlay"><a href="Interior/24.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/25.jpg"><div class="portfolio-overlay"><a href="Interior/25.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/26.jpg"><div class="portfolio-overlay"><a href="Interior/26.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/27.jpg"><div class="portfolio-overlay"><a href="Interior/27.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/28.jpg"><div class="portfolio-overlay"><a href="Interior/28.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/29.jpg"><div class="portfolio-overlay"><a href="Interior/29.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/30.jpg"><div class="portfolio-overlay"><a href="Interior/30.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/31.jpg"><div class="portfolio-overlay"><a href="Interior/31.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/32.jpg"><div class="portfolio-overlay"><a href="Interior/32.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/33.jpg"><div class="portfolio-overlay"><a href="Interior/33.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/34.jpg"><div class="portfolio-overlay"><a href="Interior/34.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/35.jpg"><div class="portfolio-overlay"><a href="Interior/35.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/36.jpg"><div class="portfolio-overlay"><a href="Interior/36.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/37.jpg"><div class="portfolio-overlay"><a href="Interior/37.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/38.jpg"><div class="portfolio-overlay"><a href="Interior/38.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/39.jpg"><div class="portfolio-overlay"><a href="Interior/39.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/40.jpg"><div class="portfolio-overlay"><a href="Interior/40.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/41.jpg"><div class="portfolio-overlay"><a href="Interior/41.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/43.jpg"><div class="portfolio-overlay"><a href="Interior/43.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/44.jpg"><div class="portfolio-overlay"><a href="Interior/44.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+  <div class="col-lg-3 col-md-6 col-12 portfolio-item third"><div class="position-relative"><img class="img-fluid w-100" src="Interior/45.jpg"><div class="portfolio-overlay"><a href="Interior/45.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+
+  <div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/1.jpg"><div class="portfolio-overlay"><a href="Realestate/1.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/2.jpg"><div class="portfolio-overlay"><a href="Realestate/2.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/3.jpg"><div class="portfolio-overlay"><a href="Realestate/3.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/4.jpg"><div class="portfolio-overlay"><a href="Realestate/4.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/5.jpg"><div class="portfolio-overlay"><a href="Realestate/5.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/6.jpg"><div class="portfolio-overlay"><a href="Realestate/6.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/7.jpg"><div class="portfolio-overlay"><a href="Realestate/7.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/8.jpg"><div class="portfolio-overlay"><a href="Realestate/8.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/9.jpg"><div class="portfolio-overlay"><a href="Realestate/9.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/10.jpg"><div class="portfolio-overlay"><a href="Realestate/10.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/11.jpg"><div class="portfolio-overlay"><a href="Realestate/11.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/12.jpg"><div class="portfolio-overlay"><a href="Realestate/12.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/13.jpg"><div class="portfolio-overlay"><a href="Realestate/13.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/14.jpg"><div class="portfolio-overlay"><a href="Realestate/14.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/15.jpg"><div class="portfolio-overlay"><a href="Realestate/15.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/16.jpg"><div class="portfolio-overlay"><a href="Realestate/16.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/17.jpg"><div class="portfolio-overlay"><a href="Realestate/17.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/18.jpg"><div class="portfolio-overlay"><a href="Realestate/18.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/19.jpg"><div class="portfolio-overlay"><a href="Realestate/19.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+<div class="col-lg-3 col-md-6 portfolio-item fifth"><div class="position-relative overflow-hidden"><img class="img-fluid w-100" src="Realestate/20.jpg"><div class="portfolio-overlay"><a href="Realestate/20.jpg"><i class="fa fa-plus fa-2x text-dark"></i></a></div></div></div>
+
+      
+    </div>
+    <!-- IMAGE GRID END -->
+
+  </div>
+</div>
+
+
+
 
 <!-- Portfolio Section End -->
-
+<br>
+<br>
     
 
 
