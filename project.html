@@ -319,39 +319,63 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     cursor:pointer;
     pointer-events:auto;
   }
-  /* Popup Image Full Width on Mobile */
-#modalImg {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-}
-
-/* Mobile full-screen popup */
-@media (max-width: 768px) {
-  .modal-content {
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    top: 0 !important;
-    transform: none !important;
-    border-radius: 0 !important;
-  }
-
-  #modalImg {
-    width: 100% !important;
-    height: auto !important;
-    max-height: 100vh !important;
-  }
-}
-
 
   /* basic grid for demo */
   .row.g-4 { display:flex; flex-wrap:wrap; gap:16px; margin-top:18px; }
   .col-lg-3 { width:calc(25% - 12px); min-width:180px; }
   .img-fluid { width:100%; display:block; border-radius:6px; }
+
+  /* FULL WIDTH IMAGES IN MOBILE */
+@media (max-width: 768px) {
+  .portfolio-container .col-lg-3,
+  .portfolio-container .col-md-6 {
+    width: 100% !important;
+  }
+
+  .portfolio-container .position-relative img {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .row.g-4 {
+    gap: 20px !important;
+  }
+}
+/* Make images full-width and control grid columns */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 4 images per row on PC */
+  gap: 20px;
+}
+
+/* Tablet – 2 images */
+@media (max-width: 991px) {
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile – 1 full width image */
+@media (max-width: 575px) {
+  .portfolio-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Make images fill the full cell */
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Remove Bootstrap column width so our grid works */
+.portfolio-item {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
 </style>
 </head>
 <body>
