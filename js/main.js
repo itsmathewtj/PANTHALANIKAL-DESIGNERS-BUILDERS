@@ -268,4 +268,27 @@ window.addEventListener("scroll", function () {
 
 
 
-  
+  document.addEventListener("DOMContentLoaded", function () {
+
+  // Initialize Isotope
+  let iso = new Isotope('.portfolio-container', {
+      itemSelector: '.portfolio-item',
+      layoutMode: 'fitRows'
+  });
+
+  let filterButtons = document.querySelectorAll("#portfolio-flters li");
+
+  // Default filter = Architecture (.first)
+  iso.arrange({ filter: '.first' });
+
+  filterButtons.forEach(btn => {
+      btn.addEventListener("click", function () {
+          filterButtons.forEach(b => b.classList.remove("active"));
+          this.classList.add("active");
+
+          let filterValue = this.getAttribute("data-filter");
+          iso.arrange({ filter: filterValue });
+      });
+  });
+
+});

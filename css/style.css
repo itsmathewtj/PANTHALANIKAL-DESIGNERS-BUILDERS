@@ -10286,3 +10286,6 @@ h6 {
 
 
 
+.portfolio-item {
+  overflow: hidden;
+}
