@@ -524,6 +524,94 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 
 
+/* Portfolio Section */
+#projects {
+  padding: 60px 0;
+}
+
+#projects .portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+#projects .portfolio-item img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+/* Zoom on hover */
+#projects .portfolio-item:hover img {
+  transform: scale(1.06);
+}
+
+/* Info Box */
+#projects .portfolio-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 15px 20px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  border-radius: 0 0 12px 12px;
+}
+
+#projects .portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+/* Title */
+#projects .portfolio-info h4 {
+  font-size: 18px;
+  color: #fff;
+  margin: 0 0 5px 0;
+}
+
+/* Subtitle */
+#projects .portfolio-info p {
+  font-size: 14px;
+  color: #ddd;
+  margin: 0;
+}
+
+/* Icons (Zoom + Link) */
+#projects .portfolio-info i {
+  font-size: 22px;
+  color: #fff;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#projects .portfolio-info i:hover {
+  transform: scale(1.25);
+}
+
+/* Filter buttons */
+.portfolio-filters li {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #f5f5f5;
+  border-radius: 50px;
+  margin: 0 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.portfolio-filters li:hover,
+.portfolio-filters .filter-active {
+  background: #000;
+  color: #fff;
+}
+
+
+
+
 
 body {
   margin: 0;
@@ -10142,3 +10230,59 @@ h6 {
   padding: 0;
   list-style-type: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
